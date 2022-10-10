@@ -13,11 +13,6 @@
 	],
 	"scripts": {
 	},
-	"config": {
-		"commitizen": {
-			"path": "node_modules/cz-customizable"
-		}
-	},
 	"dependencies": {
 		"@prisma/client": "^4.4.0",
 		"prisma": "^4.4.0"
