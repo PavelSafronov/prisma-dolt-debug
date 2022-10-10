@@ -1,0 +1,31 @@
+{
+	"name": "prisma-mysql",
+	"version": "0.0.0",
+	"author": {
+		"name": "Alexander Schumacher",
+		"email": "a.schumacher.14.01@gmail.com"
+	},
+	"publisher": "alexn-s",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+	},
+	"config": {
+		"commitizen": {
+			"path": "node_modules/cz-customizable"
+		}
+	},
+	"dependencies": {
+		"@prisma/client": "^4.4.0",
+		"prisma": "^4.4.0"
+	},
+	"devDependencies": {
+		"@types/node": "^17.0.23"
+	},
+	"publishConfig": {
+		"access": "restricted"
+	}
+}

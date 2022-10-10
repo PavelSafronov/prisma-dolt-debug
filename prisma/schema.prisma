@@ -1,0 +1,25 @@
+datasource db {
+    provider = "mysql"
+    //   url      = "mysql://admin:randompassword@localhost:3306/mydb"
+
+	// dolt
+    url      = "mysql://root@localhost:3306/obsidian"
+    // url      = "mysql://root:root@localhost:3306/obsidian"
+
+	// windows service
+    // url      = "mysql://root:root@localhost:3305/obsidian"
+}
+
+model Sample {
+    id           Int      @id @default(autoincrement())
+    cleanBath    String
+    cleanKitchen String
+    // ADD THE FOLLOWING LINE TO THE MODEL BLOCK
+    date         DateTime
+    //   created_at  DateTime @default(now())
+    //   updated_at  DateTime @default(now()) @updatedAt
+}
+
+generator client {
+    provider = "prisma-client-js"
+}
