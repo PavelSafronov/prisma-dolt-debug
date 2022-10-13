@@ -1,0 +1,53 @@
+Starting server with Config HP="localhost:3306"|T="28800000"|R="false"|L="debug"|S="/tmp/mysql.sock"
+2022-10-13T10:20:58-07:00 INFO [conn 1] NewConnection {DisableClientMultiStatements=false}
+2022-10-13T10:20:58-07:00 DEBUG [conn 1] Starting query {connectTime=2022-10-13T10:20:58-07:00, connectionDb=, query=select @@version_comment limit 1}
+2022-10-13T10:20:58-07:00 DEBUG [conn 1] Query finished in 32 ms {connectTime=2022-10-13T10:20:58-07:00, connectionDb=, query=select @@version_comment limit 1}
+2022-10-13T10:20:58-07:00 DEBUG [conn 1] Starting query {connectTime=2022-10-13T10:20:58-07:00, connectionDb=, query=DROP DATABASE obsidian}
+2022-10-13T10:20:58-07:00 DEBUG [conn 1] Query finished in 4 ms {connectTime=2022-10-13T10:20:58-07:00, connectionDb=, query=DROP DATABASE obsidian}
+2022-10-13T10:20:58-07:00 INFO [conn 1] ConnectionClosed {}
+2022-10-13T10:20:58-07:00 INFO [conn 2] NewConnection {DisableClientMultiStatements=false}
+2022-10-13T10:20:58-07:00 DEBUG [conn 2] Starting query {connectTime=2022-10-13T10:20:58-07:00, connectionDb=, query=select @@version_comment limit 1}
+2022-10-13T10:20:58-07:00 DEBUG [conn 2] Query finished in 0 ms {connectTime=2022-10-13T10:20:58-07:00, connectionDb=, query=select @@version_comment limit 1}
+2022-10-13T10:20:58-07:00 DEBUG [conn 2] Starting query {connectTime=2022-10-13T10:20:58-07:00, connectionDb=, query=CREATE DATABASE obsidian}
+2022-10-13T10:20:58-07:00 DEBUG [conn 2] Query finished in 26 ms {connectTime=2022-10-13T10:20:58-07:00, connectionDb=, query=CREATE DATABASE obsidian}
+2022-10-13T10:20:58-07:00 INFO [conn 2] ConnectionClosed {}
+2022-10-13T10:21:01-07:00 INFO [conn 3] NewConnection {DisableClientMultiStatements=false}
+2022-10-13T10:21:01-07:00 DEBUG [conn 3] Starting query {connectTime=2022-10-13T10:21:01-07:00, connectionDb=obsidian, query=SELECT @@socket}
+2022-10-13T10:21:01-07:00 DEBUG [conn 3] Query finished in 2 ms {connectTime=2022-10-13T10:21:01-07:00, connectionDb=obsidian, query=SELECT @@socket}
+2022-10-13T10:21:01-07:00 INFO [conn 4] NewConnection {DisableClientMultiStatements=false}
+2022-10-13T10:21:01-07:00 DEBUG [conn 4] Starting query {connectTime=2022-10-13T10:21:01-07:00, connectionDb=obsidian, query=SELECT @@max_allowed_packet}
+2022-10-13T10:21:01-07:00 DEBUG [conn 4] Query finished in 2 ms {connectTime=2022-10-13T10:21:01-07:00, connectionDb=obsidian, query=SELECT @@max_allowed_packet}
+2022-10-13T10:21:01-07:00 DEBUG [conn 4] Starting query {connectTime=2022-10-13T10:21:01-07:00, connectionDb=obsidian, query=SELECT @@wait_timeout}
+2022-10-13T10:21:01-07:00 DEBUG [conn 4] Query finished in 0 ms {connectTime=2022-10-13T10:21:01-07:00, connectionDb=obsidian, query=SELECT @@wait_timeout}
+2022-10-13T10:21:01-07:00 INFO [conn 3] ConnectionClosed {}
+2022-10-13T10:21:01-07:00 DEBUG [conn 4] Starting query {connectTime=2022-10-13T10:21:01-07:00, connectionDb=obsidian, query=SELECT @@max_allowed_packet}
+2022-10-13T10:21:01-07:00 DEBUG [conn 4] Query finished in 0 ms {connectTime=2022-10-13T10:21:01-07:00, connectionDb=obsidian, query=SELECT @@max_allowed_packet}
+2022-10-13T10:21:01-07:00 DEBUG [conn 4] Starting query {connectTime=2022-10-13T10:21:01-07:00, connectionDb=obsidian, query=SELECT @@wait_timeout}
+2022-10-13T10:21:01-07:00 DEBUG [conn 4] Query finished in 0 ms {connectTime=2022-10-13T10:21:01-07:00, connectionDb=obsidian, query=SELECT @@wait_timeout}
+2022-10-13T10:21:01-07:00 DEBUG [conn 4] Starting query {connectTime=2022-10-13T10:21:01-07:00, connectionDb=obsidian, query=SELECT @@version, @@GLOBAL.version}
+2022-10-13T10:21:01-07:00 DEBUG [conn 4] Query finished in 1 ms {connectTime=2022-10-13T10:21:01-07:00, connectionDb=obsidian, query=SELECT @@version, @@GLOBAL.version}
+2022-10-13T10:21:01-07:00 DEBUG [conn 4] Starting query {connectTime=2022-10-13T10:21:01-07:00, connectionDb=obsidian, query=SELECT @@lower_case_table_names}
+2022-10-13T10:21:01-07:00 DEBUG [conn 4] Query finished in 0 ms {connectTime=2022-10-13T10:21:01-07:00, connectionDb=obsidian, query=SELECT @@lower_case_table_names}
+2022-10-13T10:21:01-07:00 INFO [no conn] kill query: pid 14 {}
+2022-10-13T10:21:01-07:00 INFO [no conn] kill query: pid 16 {}
+2022-10-13T10:21:01-07:00 INFO [conn 4] ConnectionClosed {}
+2022-10-13T10:21:01-07:00 INFO [conn 5] NewConnection {DisableClientMultiStatements=false}
+2022-10-13T10:21:01-07:00 DEBUG [conn 5] Starting query {connectTime=2022-10-13T10:21:01-07:00, connectionDb=obsidian, query=SELECT @@socket}
+2022-10-13T10:21:01-07:00 DEBUG [conn 5] Query finished in 0 ms {connectTime=2022-10-13T10:21:01-07:00, connectionDb=obsidian, query=SELECT @@socket}
+2022-10-13T10:21:01-07:00 INFO [conn 6] NewConnection {DisableClientMultiStatements=false}
+2022-10-13T10:21:01-07:00 DEBUG [conn 6] Starting query {connectTime=2022-10-13T10:21:01-07:00, connectionDb=obsidian, query=SELECT @@max_allowed_packet}
+2022-10-13T10:21:01-07:00 DEBUG [conn 6] Query finished in 0 ms {connectTime=2022-10-13T10:21:01-07:00, connectionDb=obsidian, query=SELECT @@max_allowed_packet}
+2022-10-13T10:21:01-07:00 DEBUG [conn 6] Starting query {connectTime=2022-10-13T10:21:01-07:00, connectionDb=obsidian, query=SELECT @@wait_timeout}
+2022-10-13T10:21:01-07:00 DEBUG [conn 6] Query finished in 0 ms {connectTime=2022-10-13T10:21:01-07:00, connectionDb=obsidian, query=SELECT @@wait_timeout}
+2022-10-13T10:21:01-07:00 INFO [conn 5] ConnectionClosed {}
+2022-10-13T10:21:01-07:00 DEBUG [conn 6] Starting query {connectTime=2022-10-13T10:21:01-07:00, connectionDb=obsidian, query=SELECT @@max_allowed_packet}
+2022-10-13T10:21:01-07:00 DEBUG [conn 6] Query finished in 0 ms {connectTime=2022-10-13T10:21:01-07:00, connectionDb=obsidian, query=SELECT @@max_allowed_packet}
+2022-10-13T10:21:01-07:00 DEBUG [conn 6] Starting query {connectTime=2022-10-13T10:21:01-07:00, connectionDb=obsidian, query=SELECT @@wait_timeout}
+2022-10-13T10:21:01-07:00 DEBUG [conn 6] Query finished in 0 ms {connectTime=2022-10-13T10:21:01-07:00, connectionDb=obsidian, query=SELECT @@wait_timeout}
+2022-10-13T10:21:01-07:00 DEBUG [conn 6] Starting query {connectTime=2022-10-13T10:21:01-07:00, connectionDb=obsidian, query=SELECT @@version, @@GLOBAL.version}
+2022-10-13T10:21:01-07:00 DEBUG [conn 6] Query finished in 1 ms {connectTime=2022-10-13T10:21:01-07:00, connectionDb=obsidian, query=SELECT @@version, @@GLOBAL.version}
+2022-10-13T10:21:01-07:00 DEBUG [conn 6] Starting query {connectTime=2022-10-13T10:21:01-07:00, connectionDb=obsidian, query=SELECT @@lower_case_table_names}
+2022-10-13T10:21:01-07:00 DEBUG [conn 6] Query finished in 0 ms {connectTime=2022-10-13T10:21:01-07:00, connectionDb=obsidian, query=SELECT @@lower_case_table_names}
+2022-10-13T10:21:01-07:00 INFO [no conn] kill query: pid 25 {}
+2022-10-13T10:21:01-07:00 INFO [no conn] kill query: pid 27 {}
+2022-10-13T10:21:01-07:00 INFO [conn 6] ConnectionClosed {}

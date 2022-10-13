@@ -1,0 +1,2868 @@
+/usr/local/Cellar/mysql/8.0.30_1/bin/mysqld, Version: 8.0.30 (Homebrew). started with:
+Tcp port: 3306  Unix socket: /tmp/mysql.sock
+Time                 Id Command    Argument
+2022-10-13T17:24:54.904386Z	    8 Connect	root@localhost on  using Socket
+2022-10-13T17:24:54.908549Z	    8 Query	select @@version_comment limit 1
+2022-10-13T17:24:54.915227Z	    8 Query	DROP DATABASE obsidian
+2022-10-13T17:24:54.945653Z	    8 Query	SELECT DATABASE()
+2022-10-13T17:24:54.946437Z	    8 Quit	
+2022-10-13T17:24:54.963592Z	    9 Connect	root@localhost on  using Socket
+2022-10-13T17:24:54.963807Z	    9 Query	select @@version_comment limit 1
+2022-10-13T17:24:54.964019Z	    9 Query	CREATE DATABASE obsidian
+2022-10-13T17:24:54.965247Z	    9 Quit	
+2022-10-13T17:24:57.164493Z	   10 Connect	root@localhost on obsidian using TCP/IP
+2022-10-13T17:24:57.165055Z	   10 Query	SELECT @@socket
+2022-10-13T17:24:57.165537Z	   11 Connect	root@localhost on obsidian using Socket
+2022-10-13T17:24:57.165729Z	   11 Query	SELECT @@max_allowed_packet
+2022-10-13T17:24:57.165842Z	   11 Query	SELECT @@wait_timeout
+2022-10-13T17:24:57.165970Z	   10 Quit	
+2022-10-13T17:24:57.166056Z	   11 Query	SELECT @@max_allowed_packet
+2022-10-13T17:24:57.166187Z	   11 Query	SELECT @@wait_timeout
+2022-10-13T17:24:57.167838Z	   11 Prepare	SELECT @@version, @@GLOBAL.version
+2022-10-13T17:24:57.167982Z	   11 Execute	SELECT @@version, @@GLOBAL.version
+2022-10-13T17:24:57.168652Z	   11 Prepare	SELECT @@lower_case_table_names
+2022-10-13T17:24:57.168689Z	   11 Execute	SELECT @@lower_case_table_names
+2022-10-13T17:24:57.200476Z	   12 Connect	root@localhost on obsidian using TCP/IP
+2022-10-13T17:24:57.200808Z	   12 Query	SELECT @@socket
+2022-10-13T17:24:57.201196Z	   13 Connect	root@localhost on obsidian using Socket
+2022-10-13T17:24:57.201376Z	   13 Query	SELECT @@max_allowed_packet
+2022-10-13T17:24:57.201503Z	   13 Query	SELECT @@wait_timeout
+2022-10-13T17:24:57.201644Z	   12 Quit	
+2022-10-13T17:24:57.201744Z	   13 Query	SELECT @@max_allowed_packet
+2022-10-13T17:24:57.201849Z	   13 Query	SELECT @@wait_timeout
+2022-10-13T17:24:57.202243Z	   13 Prepare	SELECT @@version, @@GLOBAL.version
+2022-10-13T17:24:57.202332Z	   13 Execute	SELECT @@version, @@GLOBAL.version
+2022-10-13T17:24:57.202542Z	   13 Prepare	SELECT @@lower_case_table_names
+2022-10-13T17:24:57.202589Z	   13 Execute	SELECT @@lower_case_table_names
+2022-10-13T17:24:57.205143Z	   13 Query	CREATE DATABASE `prisma_migrate_shadow_db_428379a6-b8b0-4c81-830d-e5fc8f88636c`
+2022-10-13T17:24:57.207431Z	   14 Connect	root@localhost on prisma_migrate_shadow_db_428379a6-b8b0-4c81-830d-e5fc8f88636c using TCP/IP
+2022-10-13T17:24:57.207782Z	   14 Query	SELECT @@socket
+2022-10-13T17:24:57.208135Z	   15 Connect	root@localhost on prisma_migrate_shadow_db_428379a6-b8b0-4c81-830d-e5fc8f88636c using Socket
+2022-10-13T17:24:57.208330Z	   15 Query	SELECT @@max_allowed_packet
+2022-10-13T17:24:57.208437Z	   15 Query	SELECT @@wait_timeout
+2022-10-13T17:24:57.208551Z	   14 Quit	
+2022-10-13T17:24:57.208574Z	   15 Query	SELECT @@max_allowed_packet
+2022-10-13T17:24:57.208706Z	   15 Query	SELECT @@wait_timeout
+2022-10-13T17:24:57.208881Z	   15 Prepare	SELECT @@version, @@GLOBAL.version
+2022-10-13T17:24:57.208932Z	   15 Execute	SELECT @@version, @@GLOBAL.version
+2022-10-13T17:24:57.209086Z	   15 Prepare	SELECT @@lower_case_table_names
+2022-10-13T17:24:57.209132Z	   15 Execute	SELECT @@lower_case_table_names
+2022-10-13T17:24:57.209453Z	   15 Prepare	SELECT @@GLOBAL.version version
+2022-10-13T17:24:57.209491Z	   15 Execute	SELECT @@GLOBAL.version version
+2022-10-13T17:24:57.227719Z	   15 Prepare	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = ?
+                AND column_info.table_schema = ?
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T17:24:57.227838Z	   15 Execute	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = 'prisma_migrate_shadow_db_428379a6-b8b0-4c81-830d-e5fc8f88636c'
+                AND column_info.table_schema = 'prisma_migrate_shadow_db_428379a6-b8b0-4c81-830d-e5fc8f88636c'
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T17:24:57.239932Z	   15 Prepare	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = ?
+            ORDER BY ordinal_position
+2022-10-13T17:24:57.240010Z	   15 Execute	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = 'prisma_migrate_shadow_db_428379a6-b8b0-4c81-830d-e5fc8f88636c'
+            ORDER BY ordinal_position
+2022-10-13T17:24:57.243317Z	   15 Prepare	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = ?
+                AND BINARY rc.constraint_schema = ?
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T17:24:57.243408Z	   15 Execute	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = 'prisma_migrate_shadow_db_428379a6-b8b0-4c81-830d-e5fc8f88636c'
+                AND BINARY rc.constraint_schema = 'prisma_migrate_shadow_db_428379a6-b8b0-4c81-830d-e5fc8f88636c'
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T17:24:57.251222Z	   15 Prepare	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = ?
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T17:24:57.251342Z	   15 Execute	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = 'prisma_migrate_shadow_db_428379a6-b8b0-4c81-830d-e5fc8f88636c'
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T17:24:57.253086Z	   15 Prepare	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = ?
+2022-10-13T17:24:57.253156Z	   15 Execute	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = 'prisma_migrate_shadow_db_428379a6-b8b0-4c81-830d-e5fc8f88636c'
+2022-10-13T17:24:57.256085Z	   15 Prepare	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = ?
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T17:24:57.256196Z	   15 Execute	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = 'prisma_migrate_shadow_db_428379a6-b8b0-4c81-830d-e5fc8f88636c'
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T17:24:57.257133Z	   13 Query	DROP DATABASE IF EXISTS `prisma_migrate_shadow_db_428379a6-b8b0-4c81-830d-e5fc8f88636c`
+2022-10-13T17:24:57.258910Z	   13 Prepare	SELECT @@GLOBAL.version version
+2022-10-13T17:24:57.258965Z	   13 Execute	SELECT @@GLOBAL.version version
+2022-10-13T17:24:57.260930Z	   13 Prepare	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = ?
+                AND column_info.table_schema = ?
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T17:24:57.261019Z	   13 Execute	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = 'obsidian'
+                AND column_info.table_schema = 'obsidian'
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T17:24:57.263811Z	   13 Prepare	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = ?
+            ORDER BY ordinal_position
+2022-10-13T17:24:57.263922Z	   13 Execute	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = 'obsidian'
+            ORDER BY ordinal_position
+2022-10-13T17:24:57.265593Z	   13 Prepare	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = ?
+                AND BINARY rc.constraint_schema = ?
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T17:24:57.265643Z	   13 Execute	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = 'obsidian'
+                AND BINARY rc.constraint_schema = 'obsidian'
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T17:24:57.267927Z	   13 Prepare	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = ?
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T17:24:57.268013Z	   13 Execute	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = 'obsidian'
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T17:24:57.269195Z	   13 Prepare	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = ?
+2022-10-13T17:24:57.269312Z	   13 Execute	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = 'obsidian'
+2022-10-13T17:24:57.270870Z	   13 Prepare	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = ?
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T17:24:57.270955Z	   13 Execute	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = 'obsidian'
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T17:24:57.271876Z	   13 Query	CREATE DATABASE `prisma_migrate_shadow_db_a032cac4-f57a-4f0d-af79-d1302e6e7915`
+2022-10-13T17:24:57.274711Z	   16 Connect	root@localhost on prisma_migrate_shadow_db_a032cac4-f57a-4f0d-af79-d1302e6e7915 using TCP/IP
+2022-10-13T17:24:57.275005Z	   16 Query	SELECT @@socket
+2022-10-13T17:24:57.275300Z	   17 Connect	root@localhost on prisma_migrate_shadow_db_a032cac4-f57a-4f0d-af79-d1302e6e7915 using Socket
+2022-10-13T17:24:57.275488Z	   17 Query	SELECT @@max_allowed_packet
+2022-10-13T17:24:57.275590Z	   17 Query	SELECT @@wait_timeout
+2022-10-13T17:24:57.275695Z	   16 Quit	
+2022-10-13T17:24:57.275718Z	   17 Query	SELECT @@max_allowed_packet
+2022-10-13T17:24:57.275839Z	   17 Query	SELECT @@wait_timeout
+2022-10-13T17:24:57.275995Z	   17 Prepare	SELECT @@version, @@GLOBAL.version
+2022-10-13T17:24:57.276048Z	   17 Execute	SELECT @@version, @@GLOBAL.version
+2022-10-13T17:24:57.276217Z	   17 Prepare	SELECT @@lower_case_table_names
+2022-10-13T17:24:57.276261Z	   17 Execute	SELECT @@lower_case_table_names
+2022-10-13T17:24:57.276453Z	   17 Query	-- CreateTable
+CREATE TABLE `Sample` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `cleanBath` VARCHAR(191) NOT NULL,
+    `cleanKitchen` VARCHAR(191) NOT NULL,
+    `date` DATETIME(3) NOT NULL,
+
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
+2022-10-13T17:24:57.288161Z	   17 Prepare	SELECT @@GLOBAL.version version
+2022-10-13T17:24:57.288225Z	   17 Execute	SELECT @@GLOBAL.version version
+2022-10-13T17:24:57.290299Z	   17 Prepare	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = ?
+                AND column_info.table_schema = ?
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T17:24:57.290357Z	   17 Execute	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = 'prisma_migrate_shadow_db_a032cac4-f57a-4f0d-af79-d1302e6e7915'
+                AND column_info.table_schema = 'prisma_migrate_shadow_db_a032cac4-f57a-4f0d-af79-d1302e6e7915'
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T17:24:57.294969Z	   17 Prepare	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = ?
+            ORDER BY ordinal_position
+2022-10-13T17:24:57.295085Z	   17 Execute	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = 'prisma_migrate_shadow_db_a032cac4-f57a-4f0d-af79-d1302e6e7915'
+            ORDER BY ordinal_position
+2022-10-13T17:24:57.298546Z	   17 Prepare	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = ?
+                AND BINARY rc.constraint_schema = ?
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T17:24:57.298649Z	   17 Execute	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = 'prisma_migrate_shadow_db_a032cac4-f57a-4f0d-af79-d1302e6e7915'
+                AND BINARY rc.constraint_schema = 'prisma_migrate_shadow_db_a032cac4-f57a-4f0d-af79-d1302e6e7915'
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T17:24:57.302009Z	   17 Prepare	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = ?
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T17:24:57.302171Z	   17 Execute	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = 'prisma_migrate_shadow_db_a032cac4-f57a-4f0d-af79-d1302e6e7915'
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T17:24:57.303659Z	   17 Prepare	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = ?
+2022-10-13T17:24:57.303769Z	   17 Execute	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = 'prisma_migrate_shadow_db_a032cac4-f57a-4f0d-af79-d1302e6e7915'
+2022-10-13T17:24:57.305412Z	   17 Prepare	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = ?
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T17:24:57.305520Z	   17 Execute	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = 'prisma_migrate_shadow_db_a032cac4-f57a-4f0d-af79-d1302e6e7915'
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T17:24:57.306401Z	   13 Query	DROP DATABASE IF EXISTS `prisma_migrate_shadow_db_a032cac4-f57a-4f0d-af79-d1302e6e7915`
+2022-10-13T17:24:57.312801Z	   13 Query	SELECT GET_LOCK('prisma_migrate', 10)
+2022-10-13T17:24:57.313001Z	   13 Execute	SELECT @@GLOBAL.version version
+2022-10-13T17:24:57.313188Z	   13 Execute	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = 'obsidian'
+                AND column_info.table_schema = 'obsidian'
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T17:24:57.315277Z	   13 Execute	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = 'obsidian'
+            ORDER BY ordinal_position
+2022-10-13T17:24:57.316235Z	   13 Execute	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = 'obsidian'
+                AND BINARY rc.constraint_schema = 'obsidian'
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T17:24:57.318483Z	   13 Execute	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = 'obsidian'
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T17:24:57.319435Z	   13 Execute	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = 'obsidian'
+2022-10-13T17:24:57.320014Z	   13 Execute	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = 'obsidian'
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T17:24:57.320910Z	   13 Query	CREATE TABLE _prisma_migrations (
+    id                      VARCHAR(36) PRIMARY KEY NOT NULL,
+    checksum                VARCHAR(64) NOT NULL,
+    finished_at             DATETIME(3),
+    migration_name          VARCHAR(255) NOT NULL,
+    logs                    TEXT,
+    rolled_back_at          DATETIME(3),
+    started_at              DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+    applied_steps_count     INTEGER UNSIGNED NOT NULL DEFAULT 0
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
+2022-10-13T17:24:57.335546Z	   13 Prepare	SELECT `id`, `checksum`, `finished_at`, `migration_name`, `logs`, `rolled_back_at`, `started_at`, `applied_steps_count` FROM `_prisma_migrations` ORDER BY `started_at` ASC
+2022-10-13T17:24:57.335637Z	   13 Execute	SELECT `id`, `checksum`, `finished_at`, `migration_name`, `logs`, `rolled_back_at`, `started_at`, `applied_steps_count` FROM `_prisma_migrations` ORDER BY `started_at` ASC
+2022-10-13T17:24:57.336960Z	   13 Prepare	INSERT INTO `_prisma_migrations` (`id`,`checksum`,`started_at`,`migration_name`) VALUES (?,?,?,?)
+2022-10-13T17:24:57.337033Z	   13 Execute	INSERT INTO `_prisma_migrations` (`id`,`checksum`,`started_at`,`migration_name`) VALUES ('6eef868d-96a3-425b-9db9-63463ea2343f','81941a3412ceaf55cb4dc0e6bee35c488003303d2929e308b8ded3d1575fdd20','2022-10-13 17:24:57.336054','20221012213357_foo')
+2022-10-13T17:24:57.340857Z	   13 Query	-- CreateTable
+CREATE TABLE `Sample` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `cleanBath` VARCHAR(191) NOT NULL,
+    `cleanKitchen` VARCHAR(191) NOT NULL,
+    `date` DATETIME(3) NOT NULL,
+
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
+2022-10-13T17:24:57.349137Z	   13 Prepare	UPDATE `_prisma_migrations` SET `applied_steps_count` = (`applied_steps_count` + ?) WHERE `id` = ?
+2022-10-13T17:24:57.349235Z	   13 Prepare	UPDATE `_prisma_migrations` SET `applied_steps_count` = (`applied_steps_count` + ?) WHERE `id` = ?
+2022-10-13T17:24:57.349267Z	   13 Execute	UPDATE `_prisma_migrations` SET `applied_steps_count` = (`applied_steps_count` + 1) WHERE `id` = '6eef868d-96a3-425b-9db9-63463ea2343f'
+2022-10-13T17:24:57.350411Z	   13 Prepare	UPDATE `_prisma_migrations` SET `finished_at` = ? WHERE `id` = ?
+2022-10-13T17:24:57.350460Z	   13 Execute	UPDATE `_prisma_migrations` SET `finished_at` = '2022-10-13 17:24:57.350311' WHERE `id` = '6eef868d-96a3-425b-9db9-63463ea2343f'
+2022-10-13T17:24:57.353182Z	   13 Query	CREATE DATABASE `prisma_migrate_shadow_db_df5ca63b-e9aa-4587-8d0c-aad113e6fcd1`
+2022-10-13T17:24:57.355494Z	   18 Connect	root@localhost on prisma_migrate_shadow_db_df5ca63b-e9aa-4587-8d0c-aad113e6fcd1 using TCP/IP
+2022-10-13T17:24:57.355879Z	   18 Query	SELECT @@socket
+2022-10-13T17:24:57.356186Z	   19 Connect	root@localhost on prisma_migrate_shadow_db_df5ca63b-e9aa-4587-8d0c-aad113e6fcd1 using Socket
+2022-10-13T17:24:57.356364Z	   19 Query	SELECT @@max_allowed_packet
+2022-10-13T17:24:57.356466Z	   19 Query	SELECT @@wait_timeout
+2022-10-13T17:24:57.356573Z	   18 Quit	
+2022-10-13T17:24:57.356602Z	   19 Query	SELECT @@max_allowed_packet
+2022-10-13T17:24:57.356700Z	   19 Query	SELECT @@wait_timeout
+2022-10-13T17:24:57.356852Z	   19 Prepare	SELECT @@version, @@GLOBAL.version
+2022-10-13T17:24:57.356902Z	   19 Execute	SELECT @@version, @@GLOBAL.version
+2022-10-13T17:24:57.357046Z	   19 Prepare	SELECT @@lower_case_table_names
+2022-10-13T17:24:57.357087Z	   19 Execute	SELECT @@lower_case_table_names
+2022-10-13T17:24:57.357262Z	   19 Query	-- CreateTable
+CREATE TABLE `Sample` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `cleanBath` VARCHAR(191) NOT NULL,
+    `cleanKitchen` VARCHAR(191) NOT NULL,
+    `date` DATETIME(3) NOT NULL,
+
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
+2022-10-13T17:24:57.365267Z	   19 Prepare	SELECT @@GLOBAL.version version
+2022-10-13T17:24:57.365310Z	   19 Execute	SELECT @@GLOBAL.version version
+2022-10-13T17:24:57.367416Z	   19 Prepare	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = ?
+                AND column_info.table_schema = ?
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T17:24:57.367506Z	   19 Execute	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = 'prisma_migrate_shadow_db_df5ca63b-e9aa-4587-8d0c-aad113e6fcd1'
+                AND column_info.table_schema = 'prisma_migrate_shadow_db_df5ca63b-e9aa-4587-8d0c-aad113e6fcd1'
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T17:24:57.371031Z	   19 Prepare	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = ?
+            ORDER BY ordinal_position
+2022-10-13T17:24:57.371103Z	   19 Execute	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = 'prisma_migrate_shadow_db_df5ca63b-e9aa-4587-8d0c-aad113e6fcd1'
+            ORDER BY ordinal_position
+2022-10-13T17:24:57.373504Z	   19 Prepare	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = ?
+                AND BINARY rc.constraint_schema = ?
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T17:24:57.373580Z	   19 Execute	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = 'prisma_migrate_shadow_db_df5ca63b-e9aa-4587-8d0c-aad113e6fcd1'
+                AND BINARY rc.constraint_schema = 'prisma_migrate_shadow_db_df5ca63b-e9aa-4587-8d0c-aad113e6fcd1'
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T17:24:57.377092Z	   19 Prepare	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = ?
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T17:24:57.377190Z	   19 Execute	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = 'prisma_migrate_shadow_db_df5ca63b-e9aa-4587-8d0c-aad113e6fcd1'
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T17:24:57.378626Z	   19 Prepare	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = ?
+2022-10-13T17:24:57.378736Z	   19 Execute	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = 'prisma_migrate_shadow_db_df5ca63b-e9aa-4587-8d0c-aad113e6fcd1'
+2022-10-13T17:24:57.380417Z	   19 Prepare	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = ?
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T17:24:57.380508Z	   19 Execute	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = 'prisma_migrate_shadow_db_df5ca63b-e9aa-4587-8d0c-aad113e6fcd1'
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T17:24:57.381499Z	   13 Query	DROP DATABASE IF EXISTS `prisma_migrate_shadow_db_df5ca63b-e9aa-4587-8d0c-aad113e6fcd1`
+2022-10-13T17:24:57.387825Z	   13 Query	CREATE DATABASE `prisma_migrate_shadow_db_1ffc4b92-bfa0-4637-8a38-abd011c62b4a`
+2022-10-13T17:24:57.390053Z	   20 Connect	root@localhost on prisma_migrate_shadow_db_1ffc4b92-bfa0-4637-8a38-abd011c62b4a using TCP/IP
+2022-10-13T17:24:57.390440Z	   20 Query	SELECT @@socket
+2022-10-13T17:24:57.390786Z	   21 Connect	root@localhost on prisma_migrate_shadow_db_1ffc4b92-bfa0-4637-8a38-abd011c62b4a using Socket
+2022-10-13T17:24:57.390955Z	   21 Query	SELECT @@max_allowed_packet
+2022-10-13T17:24:57.391058Z	   21 Query	SELECT @@wait_timeout
+2022-10-13T17:24:57.391163Z	   20 Quit	
+2022-10-13T17:24:57.391190Z	   21 Query	SELECT @@max_allowed_packet
+2022-10-13T17:24:57.391286Z	   21 Query	SELECT @@wait_timeout
+2022-10-13T17:24:57.391464Z	   21 Prepare	SELECT @@version, @@GLOBAL.version
+2022-10-13T17:24:57.391593Z	   21 Execute	SELECT @@version, @@GLOBAL.version
+2022-10-13T17:24:57.391762Z	   21 Prepare	SELECT @@lower_case_table_names
+2022-10-13T17:24:57.391795Z	   21 Execute	SELECT @@lower_case_table_names
+2022-10-13T17:24:57.391970Z	   21 Query	-- CreateTable
+CREATE TABLE `Sample` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `cleanBath` VARCHAR(191) NOT NULL,
+    `cleanKitchen` VARCHAR(191) NOT NULL,
+    `date` DATETIME(3) NOT NULL,
+
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
+2022-10-13T17:24:57.401141Z	   21 Prepare	SELECT @@GLOBAL.version version
+2022-10-13T17:24:57.401184Z	   21 Execute	SELECT @@GLOBAL.version version
+2022-10-13T17:24:57.403187Z	   21 Prepare	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = ?
+                AND column_info.table_schema = ?
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T17:24:57.403274Z	   21 Execute	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = 'prisma_migrate_shadow_db_1ffc4b92-bfa0-4637-8a38-abd011c62b4a'
+                AND column_info.table_schema = 'prisma_migrate_shadow_db_1ffc4b92-bfa0-4637-8a38-abd011c62b4a'
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T17:24:57.406085Z	   21 Prepare	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = ?
+            ORDER BY ordinal_position
+2022-10-13T17:24:57.406195Z	   21 Execute	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = 'prisma_migrate_shadow_db_1ffc4b92-bfa0-4637-8a38-abd011c62b4a'
+            ORDER BY ordinal_position
+2022-10-13T17:24:57.408516Z	   21 Prepare	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = ?
+                AND BINARY rc.constraint_schema = ?
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T17:24:57.408604Z	   21 Execute	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = 'prisma_migrate_shadow_db_1ffc4b92-bfa0-4637-8a38-abd011c62b4a'
+                AND BINARY rc.constraint_schema = 'prisma_migrate_shadow_db_1ffc4b92-bfa0-4637-8a38-abd011c62b4a'
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T17:24:57.411900Z	   21 Prepare	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = ?
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T17:24:57.411971Z	   21 Execute	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = 'prisma_migrate_shadow_db_1ffc4b92-bfa0-4637-8a38-abd011c62b4a'
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T17:24:57.413379Z	   21 Prepare	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = ?
+2022-10-13T17:24:57.413432Z	   21 Execute	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = 'prisma_migrate_shadow_db_1ffc4b92-bfa0-4637-8a38-abd011c62b4a'
+2022-10-13T17:24:57.414987Z	   21 Prepare	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = ?
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T17:24:57.415091Z	   21 Execute	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = 'prisma_migrate_shadow_db_1ffc4b92-bfa0-4637-8a38-abd011c62b4a'
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T17:24:57.416034Z	   13 Query	DROP DATABASE IF EXISTS `prisma_migrate_shadow_db_1ffc4b92-bfa0-4637-8a38-abd011c62b4a`
+2022-10-13T17:24:57.421993Z	   13 Query	SELECT GET_LOCK('prisma_migrate', 10)
+2022-10-13T17:24:57.422167Z	   13 Execute	SELECT @@GLOBAL.version version
+2022-10-13T17:24:57.422350Z	   13 Execute	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = 'obsidian'
+                AND column_info.table_schema = 'obsidian'
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T17:24:57.424869Z	   13 Execute	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = 'obsidian'
+            ORDER BY ordinal_position
+2022-10-13T17:24:57.426796Z	   13 Execute	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = 'obsidian'
+                AND BINARY rc.constraint_schema = 'obsidian'
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T17:24:57.429266Z	   13 Execute	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = 'obsidian'
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T17:24:57.430328Z	   13 Execute	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = 'obsidian'
+2022-10-13T17:24:57.430973Z	   13 Execute	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = 'obsidian'
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T17:24:57.431889Z	   13 Execute	SELECT `id`, `checksum`, `finished_at`, `migration_name`, `logs`, `rolled_back_at`, `started_at`, `applied_steps_count` FROM `_prisma_migrations` ORDER BY `started_at` ASC
+2022-10-13T19:52:44.115221Z	   22 Connect	root@localhost on  using Socket
+2022-10-13T19:52:44.140140Z	   22 Query	select @@version_comment limit 1
+2022-10-13T19:52:44.158579Z	   22 Query	DROP DATABASE obsidian
+2022-10-13T19:52:44.330341Z	   22 Query	SELECT DATABASE()
+2022-10-13T19:52:44.330478Z	   22 Quit	
+2022-10-13T19:52:44.354147Z	   23 Connect	root@localhost on  using Socket
+2022-10-13T19:52:44.354450Z	   23 Query	select @@version_comment limit 1
+2022-10-13T19:52:44.354627Z	   23 Query	CREATE DATABASE obsidian
+2022-10-13T19:52:44.359889Z	   23 Quit	
+2022-10-13T19:52:46.708721Z	   24 Connect	root@localhost on obsidian using TCP/IP
+2022-10-13T19:52:46.709322Z	   24 Query	SELECT @@socket
+2022-10-13T19:52:46.709798Z	   25 Connect	root@localhost on obsidian using Socket
+2022-10-13T19:52:46.711632Z	   25 Query	SELECT @@max_allowed_packet
+2022-10-13T19:52:46.711836Z	   25 Query	SELECT @@wait_timeout
+2022-10-13T19:52:46.712016Z	   24 Quit	
+2022-10-13T19:52:46.712069Z	   25 Query	SELECT @@max_allowed_packet
+2022-10-13T19:52:46.712200Z	   25 Query	SELECT @@wait_timeout
+2022-10-13T19:52:46.712724Z	   25 Prepare	SELECT @@version, @@GLOBAL.version
+2022-10-13T19:52:46.712831Z	   25 Execute	SELECT @@version, @@GLOBAL.version
+2022-10-13T19:52:46.713508Z	   25 Prepare	SELECT @@lower_case_table_names
+2022-10-13T19:52:46.713547Z	   25 Execute	SELECT @@lower_case_table_names
+2022-10-13T19:52:46.746669Z	   26 Connect	root@localhost on obsidian using TCP/IP
+2022-10-13T19:52:46.747782Z	   26 Query	SELECT @@socket
+2022-10-13T19:52:46.748481Z	   27 Connect	root@localhost on obsidian using Socket
+2022-10-13T19:52:46.748776Z	   27 Query	SELECT @@max_allowed_packet
+2022-10-13T19:52:46.748929Z	   27 Query	SELECT @@wait_timeout
+2022-10-13T19:52:46.749076Z	   26 Quit	
+2022-10-13T19:52:46.749225Z	   27 Query	SELECT @@max_allowed_packet
+2022-10-13T19:52:46.750851Z	   27 Query	SELECT @@wait_timeout
+2022-10-13T19:52:46.751377Z	   27 Prepare	SELECT @@version, @@GLOBAL.version
+2022-10-13T19:52:46.751481Z	   27 Execute	SELECT @@version, @@GLOBAL.version
+2022-10-13T19:52:46.751729Z	   27 Prepare	SELECT @@lower_case_table_names
+2022-10-13T19:52:46.751799Z	   27 Execute	SELECT @@lower_case_table_names
+2022-10-13T19:52:46.759912Z	   27 Query	CREATE DATABASE `prisma_migrate_shadow_db_a5fe3e20-c996-4eec-91df-b39270e42741`
+2022-10-13T19:52:46.762704Z	   28 Connect	root@localhost on prisma_migrate_shadow_db_a5fe3e20-c996-4eec-91df-b39270e42741 using TCP/IP
+2022-10-13T19:52:46.763142Z	   28 Query	SELECT @@socket
+2022-10-13T19:52:46.763610Z	   29 Connect	root@localhost on prisma_migrate_shadow_db_a5fe3e20-c996-4eec-91df-b39270e42741 using Socket
+2022-10-13T19:52:46.763880Z	   29 Query	SELECT @@max_allowed_packet
+2022-10-13T19:52:46.764023Z	   29 Query	SELECT @@wait_timeout
+2022-10-13T19:52:46.764173Z	   28 Quit	
+2022-10-13T19:52:46.764199Z	   29 Query	SELECT @@max_allowed_packet
+2022-10-13T19:52:46.764326Z	   29 Query	SELECT @@wait_timeout
+2022-10-13T19:52:46.764555Z	   29 Prepare	SELECT @@version, @@GLOBAL.version
+2022-10-13T19:52:46.764612Z	   29 Execute	SELECT @@version, @@GLOBAL.version
+2022-10-13T19:52:46.764776Z	   29 Prepare	SELECT @@lower_case_table_names
+2022-10-13T19:52:46.764817Z	   29 Execute	SELECT @@lower_case_table_names
+2022-10-13T19:52:46.765035Z	   29 Prepare	SELECT @@GLOBAL.version version
+2022-10-13T19:52:46.765091Z	   29 Execute	SELECT @@GLOBAL.version version
+2022-10-13T19:52:46.783111Z	   29 Prepare	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = ?
+                AND column_info.table_schema = ?
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T19:52:46.783268Z	   29 Execute	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = 'prisma_migrate_shadow_db_a5fe3e20-c996-4eec-91df-b39270e42741'
+                AND column_info.table_schema = 'prisma_migrate_shadow_db_a5fe3e20-c996-4eec-91df-b39270e42741'
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T19:52:46.795934Z	   29 Prepare	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = ?
+            ORDER BY ordinal_position
+2022-10-13T19:52:46.796043Z	   29 Execute	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = 'prisma_migrate_shadow_db_a5fe3e20-c996-4eec-91df-b39270e42741'
+            ORDER BY ordinal_position
+2022-10-13T19:52:46.805054Z	   29 Prepare	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = ?
+                AND BINARY rc.constraint_schema = ?
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T19:52:46.805175Z	   29 Execute	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = 'prisma_migrate_shadow_db_a5fe3e20-c996-4eec-91df-b39270e42741'
+                AND BINARY rc.constraint_schema = 'prisma_migrate_shadow_db_a5fe3e20-c996-4eec-91df-b39270e42741'
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T19:52:46.810072Z	   29 Prepare	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = ?
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T19:52:46.810186Z	   29 Execute	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = 'prisma_migrate_shadow_db_a5fe3e20-c996-4eec-91df-b39270e42741'
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T19:52:46.811807Z	   29 Prepare	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = ?
+2022-10-13T19:52:46.811873Z	   29 Execute	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = 'prisma_migrate_shadow_db_a5fe3e20-c996-4eec-91df-b39270e42741'
+2022-10-13T19:52:46.813453Z	   29 Prepare	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = ?
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T19:52:46.813553Z	   29 Execute	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = 'prisma_migrate_shadow_db_a5fe3e20-c996-4eec-91df-b39270e42741'
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T19:52:46.816541Z	   27 Query	DROP DATABASE IF EXISTS `prisma_migrate_shadow_db_a5fe3e20-c996-4eec-91df-b39270e42741`
+2022-10-13T19:52:46.820651Z	   27 Prepare	SELECT @@GLOBAL.version version
+2022-10-13T19:52:46.820691Z	   27 Execute	SELECT @@GLOBAL.version version
+2022-10-13T19:52:46.823072Z	   27 Prepare	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = ?
+                AND column_info.table_schema = ?
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T19:52:46.823129Z	   27 Execute	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = 'obsidian'
+                AND column_info.table_schema = 'obsidian'
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T19:52:46.826032Z	   27 Prepare	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = ?
+            ORDER BY ordinal_position
+2022-10-13T19:52:46.826148Z	   27 Execute	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = 'obsidian'
+            ORDER BY ordinal_position
+2022-10-13T19:52:46.827861Z	   27 Prepare	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = ?
+                AND BINARY rc.constraint_schema = ?
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T19:52:46.827952Z	   27 Execute	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = 'obsidian'
+                AND BINARY rc.constraint_schema = 'obsidian'
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T19:52:46.831907Z	   27 Prepare	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = ?
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T19:52:46.832039Z	   27 Execute	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = 'obsidian'
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T19:52:46.833649Z	   27 Prepare	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = ?
+2022-10-13T19:52:46.833704Z	   27 Execute	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = 'obsidian'
+2022-10-13T19:52:46.837280Z	   27 Prepare	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = ?
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T19:52:46.837388Z	   27 Execute	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = 'obsidian'
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T19:52:46.838377Z	   27 Query	CREATE DATABASE `prisma_migrate_shadow_db_df18943f-94bb-47c3-81fe-91c4e523e0db`
+2022-10-13T19:52:46.841021Z	   30 Connect	root@localhost on prisma_migrate_shadow_db_df18943f-94bb-47c3-81fe-91c4e523e0db using TCP/IP
+2022-10-13T19:52:46.841390Z	   30 Query	SELECT @@socket
+2022-10-13T19:52:46.841730Z	   31 Connect	root@localhost on prisma_migrate_shadow_db_df18943f-94bb-47c3-81fe-91c4e523e0db using Socket
+2022-10-13T19:52:46.841918Z	   31 Query	SELECT @@max_allowed_packet
+2022-10-13T19:52:46.843107Z	   31 Query	SELECT @@wait_timeout
+2022-10-13T19:52:46.843234Z	   30 Quit	
+2022-10-13T19:52:46.843261Z	   31 Query	SELECT @@max_allowed_packet
+2022-10-13T19:52:46.843384Z	   31 Query	SELECT @@wait_timeout
+2022-10-13T19:52:46.843573Z	   31 Prepare	SELECT @@version, @@GLOBAL.version
+2022-10-13T19:52:46.843641Z	   31 Execute	SELECT @@version, @@GLOBAL.version
+2022-10-13T19:52:46.843828Z	   31 Prepare	SELECT @@lower_case_table_names
+2022-10-13T19:52:46.843866Z	   31 Execute	SELECT @@lower_case_table_names
+2022-10-13T19:52:46.844552Z	   31 Query	-- CreateTable
+CREATE TABLE `Sample` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `cleanBath` VARCHAR(191) NOT NULL,
+    `cleanKitchen` VARCHAR(191) NOT NULL,
+    `date` DATETIME(3) NOT NULL,
+
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
+2022-10-13T19:52:46.864373Z	   31 Prepare	SELECT @@GLOBAL.version version
+2022-10-13T19:52:46.864427Z	   31 Execute	SELECT @@GLOBAL.version version
+2022-10-13T19:52:46.869620Z	   31 Prepare	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = ?
+                AND column_info.table_schema = ?
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T19:52:46.869712Z	   31 Execute	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = 'prisma_migrate_shadow_db_df18943f-94bb-47c3-81fe-91c4e523e0db'
+                AND column_info.table_schema = 'prisma_migrate_shadow_db_df18943f-94bb-47c3-81fe-91c4e523e0db'
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T19:52:46.874023Z	   31 Prepare	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = ?
+            ORDER BY ordinal_position
+2022-10-13T19:52:46.874161Z	   31 Execute	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = 'prisma_migrate_shadow_db_df18943f-94bb-47c3-81fe-91c4e523e0db'
+            ORDER BY ordinal_position
+2022-10-13T19:52:46.876717Z	   31 Prepare	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = ?
+                AND BINARY rc.constraint_schema = ?
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T19:52:46.876799Z	   31 Execute	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = 'prisma_migrate_shadow_db_df18943f-94bb-47c3-81fe-91c4e523e0db'
+                AND BINARY rc.constraint_schema = 'prisma_migrate_shadow_db_df18943f-94bb-47c3-81fe-91c4e523e0db'
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T19:52:46.882022Z	   31 Prepare	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = ?
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T19:52:46.882120Z	   31 Execute	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = 'prisma_migrate_shadow_db_df18943f-94bb-47c3-81fe-91c4e523e0db'
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T19:52:46.883704Z	   31 Prepare	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = ?
+2022-10-13T19:52:46.883778Z	   31 Execute	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = 'prisma_migrate_shadow_db_df18943f-94bb-47c3-81fe-91c4e523e0db'
+2022-10-13T19:52:46.885318Z	   31 Prepare	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = ?
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T19:52:46.885410Z	   31 Execute	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = 'prisma_migrate_shadow_db_df18943f-94bb-47c3-81fe-91c4e523e0db'
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T19:52:46.886302Z	   27 Query	DROP DATABASE IF EXISTS `prisma_migrate_shadow_db_df18943f-94bb-47c3-81fe-91c4e523e0db`
+2022-10-13T19:52:46.894827Z	   27 Query	SELECT GET_LOCK('prisma_migrate', 10)
+2022-10-13T19:52:46.895027Z	   27 Execute	SELECT @@GLOBAL.version version
+2022-10-13T19:52:46.895195Z	   27 Execute	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = 'obsidian'
+                AND column_info.table_schema = 'obsidian'
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T19:52:46.897624Z	   27 Execute	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = 'obsidian'
+            ORDER BY ordinal_position
+2022-10-13T19:52:46.898671Z	   27 Execute	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = 'obsidian'
+                AND BINARY rc.constraint_schema = 'obsidian'
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T19:52:46.900241Z	   27 Execute	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = 'obsidian'
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T19:52:46.901274Z	   27 Execute	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = 'obsidian'
+2022-10-13T19:52:46.901924Z	   27 Execute	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = 'obsidian'
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T19:52:46.902877Z	   27 Query	CREATE TABLE _prisma_migrations (
+    id                      VARCHAR(36) PRIMARY KEY NOT NULL,
+    checksum                VARCHAR(64) NOT NULL,
+    finished_at             DATETIME(3),
+    migration_name          VARCHAR(255) NOT NULL,
+    logs                    TEXT,
+    rolled_back_at          DATETIME(3),
+    started_at              DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+    applied_steps_count     INTEGER UNSIGNED NOT NULL DEFAULT 0
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
+2022-10-13T19:52:46.913151Z	   27 Prepare	SELECT `id`, `checksum`, `finished_at`, `migration_name`, `logs`, `rolled_back_at`, `started_at`, `applied_steps_count` FROM `_prisma_migrations` ORDER BY `started_at` ASC
+2022-10-13T19:52:46.913204Z	   27 Execute	SELECT `id`, `checksum`, `finished_at`, `migration_name`, `logs`, `rolled_back_at`, `started_at`, `applied_steps_count` FROM `_prisma_migrations` ORDER BY `started_at` ASC
+2022-10-13T19:52:46.914528Z	   27 Prepare	INSERT INTO `_prisma_migrations` (`id`,`checksum`,`started_at`,`migration_name`) VALUES (?,?,?,?)
+2022-10-13T19:52:46.914608Z	   27 Execute	INSERT INTO `_prisma_migrations` (`id`,`checksum`,`started_at`,`migration_name`) VALUES ('1a343380-7995-4324-94cc-54f834fe3849','81941a3412ceaf55cb4dc0e6bee35c488003303d2929e308b8ded3d1575fdd20','2022-10-13 19:52:46.913579','20221012213357_foo')
+2022-10-13T19:52:46.918278Z	   27 Query	-- CreateTable
+CREATE TABLE `Sample` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `cleanBath` VARCHAR(191) NOT NULL,
+    `cleanKitchen` VARCHAR(191) NOT NULL,
+    `date` DATETIME(3) NOT NULL,
+
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
+2022-10-13T19:52:46.926848Z	   27 Prepare	UPDATE `_prisma_migrations` SET `applied_steps_count` = (`applied_steps_count` + ?) WHERE `id` = ?
+2022-10-13T19:52:46.926944Z	   27 Prepare	UPDATE `_prisma_migrations` SET `applied_steps_count` = (`applied_steps_count` + ?) WHERE `id` = ?
+2022-10-13T19:52:46.926973Z	   27 Execute	UPDATE `_prisma_migrations` SET `applied_steps_count` = (`applied_steps_count` + 1) WHERE `id` = '1a343380-7995-4324-94cc-54f834fe3849'
+2022-10-13T19:52:46.928164Z	   27 Prepare	UPDATE `_prisma_migrations` SET `finished_at` = ? WHERE `id` = ?
+2022-10-13T19:52:46.928218Z	   27 Execute	UPDATE `_prisma_migrations` SET `finished_at` = '2022-10-13 19:52:46.928045' WHERE `id` = '1a343380-7995-4324-94cc-54f834fe3849'
+2022-10-13T19:52:46.931001Z	   27 Query	CREATE DATABASE `prisma_migrate_shadow_db_cc761500-deb4-45d7-a190-601af62f1581`
+2022-10-13T19:52:46.933234Z	   32 Connect	root@localhost on prisma_migrate_shadow_db_cc761500-deb4-45d7-a190-601af62f1581 using TCP/IP
+2022-10-13T19:52:46.935084Z	   32 Query	SELECT @@socket
+2022-10-13T19:52:46.935579Z	   33 Connect	root@localhost on prisma_migrate_shadow_db_cc761500-deb4-45d7-a190-601af62f1581 using Socket
+2022-10-13T19:52:46.935799Z	   33 Query	SELECT @@max_allowed_packet
+2022-10-13T19:52:46.935943Z	   33 Query	SELECT @@wait_timeout
+2022-10-13T19:52:46.936061Z	   32 Quit	
+2022-10-13T19:52:46.936116Z	   33 Query	SELECT @@max_allowed_packet
+2022-10-13T19:52:46.936235Z	   33 Query	SELECT @@wait_timeout
+2022-10-13T19:52:46.936403Z	   33 Prepare	SELECT @@version, @@GLOBAL.version
+2022-10-13T19:52:46.936461Z	   33 Execute	SELECT @@version, @@GLOBAL.version
+2022-10-13T19:52:46.936612Z	   33 Prepare	SELECT @@lower_case_table_names
+2022-10-13T19:52:46.936651Z	   33 Execute	SELECT @@lower_case_table_names
+2022-10-13T19:52:46.936832Z	   33 Query	-- CreateTable
+CREATE TABLE `Sample` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `cleanBath` VARCHAR(191) NOT NULL,
+    `cleanKitchen` VARCHAR(191) NOT NULL,
+    `date` DATETIME(3) NOT NULL,
+
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
+2022-10-13T19:52:46.947794Z	   33 Prepare	SELECT @@GLOBAL.version version
+2022-10-13T19:52:46.947838Z	   33 Execute	SELECT @@GLOBAL.version version
+2022-10-13T19:52:46.949741Z	   33 Prepare	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = ?
+                AND column_info.table_schema = ?
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T19:52:46.949797Z	   33 Execute	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = 'prisma_migrate_shadow_db_cc761500-deb4-45d7-a190-601af62f1581'
+                AND column_info.table_schema = 'prisma_migrate_shadow_db_cc761500-deb4-45d7-a190-601af62f1581'
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T19:52:46.952861Z	   33 Prepare	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = ?
+            ORDER BY ordinal_position
+2022-10-13T19:52:46.952967Z	   33 Execute	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = 'prisma_migrate_shadow_db_cc761500-deb4-45d7-a190-601af62f1581'
+            ORDER BY ordinal_position
+2022-10-13T19:52:46.954960Z	   33 Prepare	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = ?
+                AND BINARY rc.constraint_schema = ?
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T19:52:46.955043Z	   33 Execute	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = 'prisma_migrate_shadow_db_cc761500-deb4-45d7-a190-601af62f1581'
+                AND BINARY rc.constraint_schema = 'prisma_migrate_shadow_db_cc761500-deb4-45d7-a190-601af62f1581'
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T19:52:46.958621Z	   33 Prepare	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = ?
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T19:52:46.958724Z	   33 Execute	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = 'prisma_migrate_shadow_db_cc761500-deb4-45d7-a190-601af62f1581'
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T19:52:46.960323Z	   33 Prepare	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = ?
+2022-10-13T19:52:46.960436Z	   33 Execute	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = 'prisma_migrate_shadow_db_cc761500-deb4-45d7-a190-601af62f1581'
+2022-10-13T19:52:46.961927Z	   33 Prepare	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = ?
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T19:52:46.962036Z	   33 Execute	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = 'prisma_migrate_shadow_db_cc761500-deb4-45d7-a190-601af62f1581'
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T19:52:46.963027Z	   27 Query	DROP DATABASE IF EXISTS `prisma_migrate_shadow_db_cc761500-deb4-45d7-a190-601af62f1581`
+2022-10-13T19:52:46.971313Z	   27 Query	CREATE DATABASE `prisma_migrate_shadow_db_616cc4cd-93a5-4edf-8600-47f63dea07c4`
+2022-10-13T19:52:46.973581Z	   34 Connect	root@localhost on prisma_migrate_shadow_db_616cc4cd-93a5-4edf-8600-47f63dea07c4 using TCP/IP
+2022-10-13T19:52:46.973935Z	   34 Query	SELECT @@socket
+2022-10-13T19:52:46.974397Z	   35 Connect	root@localhost on prisma_migrate_shadow_db_616cc4cd-93a5-4edf-8600-47f63dea07c4 using Socket
+2022-10-13T19:52:46.974575Z	   35 Query	SELECT @@max_allowed_packet
+2022-10-13T19:52:46.974706Z	   35 Query	SELECT @@wait_timeout
+2022-10-13T19:52:46.974806Z	   34 Quit	
+2022-10-13T19:52:46.974842Z	   35 Query	SELECT @@max_allowed_packet
+2022-10-13T19:52:46.974947Z	   35 Query	SELECT @@wait_timeout
+2022-10-13T19:52:46.975102Z	   35 Prepare	SELECT @@version, @@GLOBAL.version
+2022-10-13T19:52:46.975153Z	   35 Execute	SELECT @@version, @@GLOBAL.version
+2022-10-13T19:52:46.975308Z	   35 Prepare	SELECT @@lower_case_table_names
+2022-10-13T19:52:46.975343Z	   35 Execute	SELECT @@lower_case_table_names
+2022-10-13T19:52:46.975521Z	   35 Query	-- CreateTable
+CREATE TABLE `Sample` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `cleanBath` VARCHAR(191) NOT NULL,
+    `cleanKitchen` VARCHAR(191) NOT NULL,
+    `date` DATETIME(3) NOT NULL,
+
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
+2022-10-13T19:52:46.984403Z	   35 Prepare	SELECT @@GLOBAL.version version
+2022-10-13T19:52:46.984444Z	   35 Execute	SELECT @@GLOBAL.version version
+2022-10-13T19:52:46.986168Z	   35 Prepare	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = ?
+                AND column_info.table_schema = ?
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T19:52:46.986225Z	   35 Execute	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = 'prisma_migrate_shadow_db_616cc4cd-93a5-4edf-8600-47f63dea07c4'
+                AND column_info.table_schema = 'prisma_migrate_shadow_db_616cc4cd-93a5-4edf-8600-47f63dea07c4'
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T19:52:46.989126Z	   35 Prepare	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = ?
+            ORDER BY ordinal_position
+2022-10-13T19:52:46.989181Z	   35 Execute	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = 'prisma_migrate_shadow_db_616cc4cd-93a5-4edf-8600-47f63dea07c4'
+            ORDER BY ordinal_position
+2022-10-13T19:52:46.991394Z	   35 Prepare	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = ?
+                AND BINARY rc.constraint_schema = ?
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T19:52:46.991477Z	   35 Execute	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = 'prisma_migrate_shadow_db_616cc4cd-93a5-4edf-8600-47f63dea07c4'
+                AND BINARY rc.constraint_schema = 'prisma_migrate_shadow_db_616cc4cd-93a5-4edf-8600-47f63dea07c4'
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T19:52:46.994156Z	   35 Prepare	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = ?
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T19:52:46.994219Z	   35 Execute	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = 'prisma_migrate_shadow_db_616cc4cd-93a5-4edf-8600-47f63dea07c4'
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T19:52:46.997021Z	   35 Prepare	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = ?
+2022-10-13T19:52:46.997086Z	   35 Execute	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = 'prisma_migrate_shadow_db_616cc4cd-93a5-4edf-8600-47f63dea07c4'
+2022-10-13T19:52:46.998737Z	   35 Prepare	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = ?
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T19:52:46.998801Z	   35 Execute	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = 'prisma_migrate_shadow_db_616cc4cd-93a5-4edf-8600-47f63dea07c4'
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T19:52:46.999740Z	   27 Query	DROP DATABASE IF EXISTS `prisma_migrate_shadow_db_616cc4cd-93a5-4edf-8600-47f63dea07c4`
+2022-10-13T19:52:47.007718Z	   27 Query	SELECT GET_LOCK('prisma_migrate', 10)
+2022-10-13T19:52:47.007900Z	   27 Execute	SELECT @@GLOBAL.version version
+2022-10-13T19:52:47.008070Z	   27 Execute	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = 'obsidian'
+                AND column_info.table_schema = 'obsidian'
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T19:52:47.010934Z	   27 Execute	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = 'obsidian'
+            ORDER BY ordinal_position
+2022-10-13T19:52:47.012842Z	   27 Execute	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = 'obsidian'
+                AND BINARY rc.constraint_schema = 'obsidian'
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T19:52:47.014609Z	   27 Execute	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = 'obsidian'
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T19:52:47.016859Z	   27 Execute	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = 'obsidian'
+2022-10-13T19:52:47.017492Z	   27 Execute	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = 'obsidian'
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T19:52:47.018401Z	   27 Execute	SELECT `id`, `checksum`, `finished_at`, `migration_name`, `logs`, `rolled_back_at`, `started_at`, `applied_steps_count` FROM `_prisma_migrations` ORDER BY `started_at` ASC
+/usr/local/Cellar/mysql/8.0.30_1/bin/mysqld, Version: 8.0.30 (Homebrew). started with:
+Tcp port: 3306  Unix socket: /tmp/mysql.sock
+Time                 Id Command    Argument
+2022-10-13T22:23:13.562968Z	    8 Connect	root@localhost on  using Socket
+2022-10-13T22:23:13.563271Z	    8 Query	select @@version_comment limit 1
+2022-10-13T22:23:13.569355Z	    8 Query	DROP DATABASE obsidian
+2022-10-13T22:23:13.592742Z	    8 Query	SELECT DATABASE()
+2022-10-13T22:23:13.592902Z	    8 Quit	
+2022-10-13T22:23:13.609717Z	    9 Connect	root@localhost on  using Socket
+2022-10-13T22:23:13.609939Z	    9 Query	select @@version_comment limit 1
+2022-10-13T22:23:13.610114Z	    9 Query	CREATE DATABASE obsidian
+2022-10-13T22:23:13.611276Z	    9 Quit	
+2022-10-13T22:23:15.848865Z	   10 Connect	root@localhost on obsidian using TCP/IP
+2022-10-13T22:23:15.849640Z	   10 Query	SELECT @@socket
+2022-10-13T22:23:15.850118Z	   11 Connect	root@localhost on obsidian using Socket
+2022-10-13T22:23:15.850274Z	   11 Query	SELECT @@max_allowed_packet
+2022-10-13T22:23:15.850390Z	   11 Query	SELECT @@wait_timeout
+2022-10-13T22:23:15.850506Z	   10 Quit	
+2022-10-13T22:23:15.850613Z	   11 Query	SELECT @@max_allowed_packet
+2022-10-13T22:23:15.850724Z	   11 Query	SELECT @@wait_timeout
+2022-10-13T22:23:15.852245Z	   11 Prepare	SELECT @@version, @@GLOBAL.version
+2022-10-13T22:23:15.852364Z	   11 Execute	SELECT @@version, @@GLOBAL.version
+2022-10-13T22:23:15.853362Z	   11 Prepare	SELECT @@lower_case_table_names
+2022-10-13T22:23:15.853403Z	   11 Execute	SELECT @@lower_case_table_names
+2022-10-13T22:23:15.891420Z	   12 Connect	root@localhost on obsidian using TCP/IP
+2022-10-13T22:23:15.891905Z	   12 Query	SELECT @@socket
+2022-10-13T22:23:15.892487Z	   13 Connect	root@localhost on obsidian using Socket
+2022-10-13T22:23:15.892648Z	   13 Query	SELECT @@max_allowed_packet
+2022-10-13T22:23:15.892777Z	   13 Query	SELECT @@wait_timeout
+2022-10-13T22:23:15.892900Z	   12 Quit	
+2022-10-13T22:23:15.893040Z	   13 Query	SELECT @@max_allowed_packet
+2022-10-13T22:23:15.893151Z	   13 Query	SELECT @@wait_timeout
+2022-10-13T22:23:15.893668Z	   13 Prepare	SELECT @@version, @@GLOBAL.version
+2022-10-13T22:23:15.893773Z	   13 Execute	SELECT @@version, @@GLOBAL.version
+2022-10-13T22:23:15.893995Z	   13 Prepare	SELECT @@lower_case_table_names
+2022-10-13T22:23:15.894025Z	   13 Execute	SELECT @@lower_case_table_names
+2022-10-13T22:23:15.897573Z	   13 Query	CREATE DATABASE `prisma_migrate_shadow_db_0ff11d0b-1132-4c4f-bda1-a076b2533f9f`
+2022-10-13T22:23:15.900595Z	   14 Connect	root@localhost on prisma_migrate_shadow_db_0ff11d0b-1132-4c4f-bda1-a076b2533f9f using TCP/IP
+2022-10-13T22:23:15.900983Z	   14 Query	SELECT @@socket
+2022-10-13T22:23:15.901422Z	   15 Connect	root@localhost on prisma_migrate_shadow_db_0ff11d0b-1132-4c4f-bda1-a076b2533f9f using Socket
+2022-10-13T22:23:15.901593Z	   15 Query	SELECT @@max_allowed_packet
+2022-10-13T22:23:15.901704Z	   15 Query	SELECT @@wait_timeout
+2022-10-13T22:23:15.901819Z	   14 Quit	
+2022-10-13T22:23:15.901856Z	   15 Query	SELECT @@max_allowed_packet
+2022-10-13T22:23:15.901972Z	   15 Query	SELECT @@wait_timeout
+2022-10-13T22:23:15.902157Z	   15 Prepare	SELECT @@version, @@GLOBAL.version
+2022-10-13T22:23:15.902207Z	   15 Execute	SELECT @@version, @@GLOBAL.version
+2022-10-13T22:23:15.902361Z	   15 Prepare	SELECT @@lower_case_table_names
+2022-10-13T22:23:15.902392Z	   15 Execute	SELECT @@lower_case_table_names
+2022-10-13T22:23:15.902590Z	   15 Prepare	SELECT @@GLOBAL.version version
+2022-10-13T22:23:15.902623Z	   15 Execute	SELECT @@GLOBAL.version version
+2022-10-13T22:23:15.925168Z	   15 Prepare	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = ?
+                AND column_info.table_schema = ?
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T22:23:15.925278Z	   15 Execute	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = 'prisma_migrate_shadow_db_0ff11d0b-1132-4c4f-bda1-a076b2533f9f'
+                AND column_info.table_schema = 'prisma_migrate_shadow_db_0ff11d0b-1132-4c4f-bda1-a076b2533f9f'
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T22:23:15.937964Z	   15 Prepare	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = ?
+            ORDER BY ordinal_position
+2022-10-13T22:23:15.938069Z	   15 Execute	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = 'prisma_migrate_shadow_db_0ff11d0b-1132-4c4f-bda1-a076b2533f9f'
+            ORDER BY ordinal_position
+2022-10-13T22:23:15.941198Z	   15 Prepare	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = ?
+                AND BINARY rc.constraint_schema = ?
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T22:23:15.941294Z	   15 Execute	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = 'prisma_migrate_shadow_db_0ff11d0b-1132-4c4f-bda1-a076b2533f9f'
+                AND BINARY rc.constraint_schema = 'prisma_migrate_shadow_db_0ff11d0b-1132-4c4f-bda1-a076b2533f9f'
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T22:23:15.945284Z	   15 Prepare	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = ?
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T22:23:15.945410Z	   15 Execute	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = 'prisma_migrate_shadow_db_0ff11d0b-1132-4c4f-bda1-a076b2533f9f'
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T22:23:15.948550Z	   15 Prepare	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = ?
+2022-10-13T22:23:15.948664Z	   15 Execute	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = 'prisma_migrate_shadow_db_0ff11d0b-1132-4c4f-bda1-a076b2533f9f'
+2022-10-13T22:23:15.951800Z	   15 Prepare	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = ?
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T22:23:15.951897Z	   15 Execute	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = 'prisma_migrate_shadow_db_0ff11d0b-1132-4c4f-bda1-a076b2533f9f'
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T22:23:15.953468Z	   13 Query	DROP DATABASE IF EXISTS `prisma_migrate_shadow_db_0ff11d0b-1132-4c4f-bda1-a076b2533f9f`
+2022-10-13T22:23:15.956145Z	   13 Prepare	SELECT @@GLOBAL.version version
+2022-10-13T22:23:15.956194Z	   13 Execute	SELECT @@GLOBAL.version version
+2022-10-13T22:23:15.959105Z	   13 Prepare	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = ?
+                AND column_info.table_schema = ?
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T22:23:15.959265Z	   13 Execute	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = 'obsidian'
+                AND column_info.table_schema = 'obsidian'
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T22:23:15.962213Z	   13 Prepare	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = ?
+            ORDER BY ordinal_position
+2022-10-13T22:23:15.962263Z	   13 Execute	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = 'obsidian'
+            ORDER BY ordinal_position
+2022-10-13T22:23:15.963996Z	   13 Prepare	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = ?
+                AND BINARY rc.constraint_schema = ?
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T22:23:15.964110Z	   13 Execute	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = 'obsidian'
+                AND BINARY rc.constraint_schema = 'obsidian'
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T22:23:15.966472Z	   13 Prepare	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = ?
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T22:23:15.966611Z	   13 Execute	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = 'obsidian'
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T22:23:15.968976Z	   13 Prepare	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = ?
+2022-10-13T22:23:15.969031Z	   13 Execute	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = 'obsidian'
+2022-10-13T22:23:15.971286Z	   13 Prepare	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = ?
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T22:23:15.971379Z	   13 Execute	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = 'obsidian'
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T22:23:15.972305Z	   13 Query	CREATE DATABASE `prisma_migrate_shadow_db_20b7621d-ec82-41fa-88a6-be287559e50b`
+2022-10-13T22:23:15.974639Z	   16 Connect	root@localhost on prisma_migrate_shadow_db_20b7621d-ec82-41fa-88a6-be287559e50b using TCP/IP
+2022-10-13T22:23:15.974928Z	   16 Query	SELECT @@socket
+2022-10-13T22:23:15.975265Z	   17 Connect	root@localhost on prisma_migrate_shadow_db_20b7621d-ec82-41fa-88a6-be287559e50b using Socket
+2022-10-13T22:23:15.975404Z	   17 Query	SELECT @@max_allowed_packet
+2022-10-13T22:23:15.975513Z	   17 Query	SELECT @@wait_timeout
+2022-10-13T22:23:15.975645Z	   16 Quit	
+2022-10-13T22:23:15.975677Z	   17 Query	SELECT @@max_allowed_packet
+2022-10-13T22:23:15.975802Z	   17 Query	SELECT @@wait_timeout
+2022-10-13T22:23:15.975972Z	   17 Prepare	SELECT @@version, @@GLOBAL.version
+2022-10-13T22:23:15.976028Z	   17 Execute	SELECT @@version, @@GLOBAL.version
+2022-10-13T22:23:15.976210Z	   17 Prepare	SELECT @@lower_case_table_names
+2022-10-13T22:23:15.976246Z	   17 Execute	SELECT @@lower_case_table_names
+2022-10-13T22:23:15.976413Z	   17 Prepare	SELECT @@GLOBAL.version version
+2022-10-13T22:23:15.976463Z	   17 Execute	SELECT @@GLOBAL.version version
+2022-10-13T22:23:15.978961Z	   17 Prepare	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = ?
+                AND column_info.table_schema = ?
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T22:23:15.979048Z	   17 Execute	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = 'prisma_migrate_shadow_db_20b7621d-ec82-41fa-88a6-be287559e50b'
+                AND column_info.table_schema = 'prisma_migrate_shadow_db_20b7621d-ec82-41fa-88a6-be287559e50b'
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T22:23:15.981957Z	   17 Prepare	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = ?
+            ORDER BY ordinal_position
+2022-10-13T22:23:15.982055Z	   17 Execute	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = 'prisma_migrate_shadow_db_20b7621d-ec82-41fa-88a6-be287559e50b'
+            ORDER BY ordinal_position
+2022-10-13T22:23:15.984438Z	   17 Prepare	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = ?
+                AND BINARY rc.constraint_schema = ?
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T22:23:15.984548Z	   17 Execute	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = 'prisma_migrate_shadow_db_20b7621d-ec82-41fa-88a6-be287559e50b'
+                AND BINARY rc.constraint_schema = 'prisma_migrate_shadow_db_20b7621d-ec82-41fa-88a6-be287559e50b'
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T22:23:15.988140Z	   17 Prepare	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = ?
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T22:23:15.988236Z	   17 Execute	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = 'prisma_migrate_shadow_db_20b7621d-ec82-41fa-88a6-be287559e50b'
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T22:23:15.990726Z	   17 Prepare	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = ?
+2022-10-13T22:23:15.990834Z	   17 Execute	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = 'prisma_migrate_shadow_db_20b7621d-ec82-41fa-88a6-be287559e50b'
+2022-10-13T22:23:15.992984Z	   17 Prepare	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = ?
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T22:23:15.993082Z	   17 Execute	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = 'prisma_migrate_shadow_db_20b7621d-ec82-41fa-88a6-be287559e50b'
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T22:23:15.993981Z	   13 Query	DROP DATABASE IF EXISTS `prisma_migrate_shadow_db_20b7621d-ec82-41fa-88a6-be287559e50b`
+2022-10-13T22:23:15.999424Z	   13 Query	SELECT GET_LOCK('prisma_migrate', 10)
+2022-10-13T22:23:15.999664Z	   13 Execute	SELECT @@GLOBAL.version version
+2022-10-13T22:23:15.999854Z	   13 Execute	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = 'obsidian'
+                AND column_info.table_schema = 'obsidian'
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T22:23:16.002060Z	   13 Execute	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = 'obsidian'
+            ORDER BY ordinal_position
+2022-10-13T22:23:16.003069Z	   13 Execute	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = 'obsidian'
+                AND BINARY rc.constraint_schema = 'obsidian'
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T22:23:16.005373Z	   13 Execute	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = 'obsidian'
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T22:23:16.007812Z	   13 Execute	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = 'obsidian'
+2022-10-13T22:23:16.008947Z	   13 Execute	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = 'obsidian'
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T22:23:16.009950Z	   13 Query	CREATE TABLE _prisma_migrations (
+    id                      VARCHAR(36) PRIMARY KEY NOT NULL,
+    checksum                VARCHAR(64) NOT NULL,
+    finished_at             DATETIME(3),
+    migration_name          VARCHAR(255) NOT NULL,
+    logs                    TEXT,
+    rolled_back_at          DATETIME(3),
+    started_at              DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+    applied_steps_count     INTEGER UNSIGNED NOT NULL DEFAULT 0
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
+2022-10-13T22:23:16.032815Z	   13 Prepare	SELECT `id`, `checksum`, `finished_at`, `migration_name`, `logs`, `rolled_back_at`, `started_at`, `applied_steps_count` FROM `_prisma_migrations` ORDER BY `started_at` ASC
+2022-10-13T22:23:16.032911Z	   13 Execute	SELECT `id`, `checksum`, `finished_at`, `migration_name`, `logs`, `rolled_back_at`, `started_at`, `applied_steps_count` FROM `_prisma_migrations` ORDER BY `started_at` ASC
+2022-10-13T22:23:16.034913Z	   13 Query	CREATE DATABASE `prisma_migrate_shadow_db_d8ea54b4-af8e-43c9-afe5-61813e310608`
+2022-10-13T22:23:16.037554Z	   18 Connect	root@localhost on prisma_migrate_shadow_db_d8ea54b4-af8e-43c9-afe5-61813e310608 using TCP/IP
+2022-10-13T22:23:16.037935Z	   18 Query	SELECT @@socket
+2022-10-13T22:23:16.038276Z	   19 Connect	root@localhost on prisma_migrate_shadow_db_d8ea54b4-af8e-43c9-afe5-61813e310608 using Socket
+2022-10-13T22:23:16.038427Z	   19 Query	SELECT @@max_allowed_packet
+2022-10-13T22:23:16.038544Z	   19 Query	SELECT @@wait_timeout
+2022-10-13T22:23:16.038660Z	   18 Quit	
+2022-10-13T22:23:16.038716Z	   19 Query	SELECT @@max_allowed_packet
+2022-10-13T22:23:16.038839Z	   19 Query	SELECT @@wait_timeout
+2022-10-13T22:23:16.039003Z	   19 Prepare	SELECT @@version, @@GLOBAL.version
+2022-10-13T22:23:16.039053Z	   19 Execute	SELECT @@version, @@GLOBAL.version
+2022-10-13T22:23:16.039221Z	   19 Prepare	SELECT @@lower_case_table_names
+2022-10-13T22:23:16.039260Z	   19 Execute	SELECT @@lower_case_table_names
+2022-10-13T22:23:16.039446Z	   19 Prepare	SELECT @@GLOBAL.version version
+2022-10-13T22:23:16.039511Z	   19 Execute	SELECT @@GLOBAL.version version
+2022-10-13T22:23:16.042188Z	   19 Prepare	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = ?
+                AND column_info.table_schema = ?
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T22:23:16.042328Z	   19 Execute	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = 'prisma_migrate_shadow_db_d8ea54b4-af8e-43c9-afe5-61813e310608'
+                AND column_info.table_schema = 'prisma_migrate_shadow_db_d8ea54b4-af8e-43c9-afe5-61813e310608'
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T22:23:16.045762Z	   19 Prepare	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = ?
+            ORDER BY ordinal_position
+2022-10-13T22:23:16.045840Z	   19 Execute	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = 'prisma_migrate_shadow_db_d8ea54b4-af8e-43c9-afe5-61813e310608'
+            ORDER BY ordinal_position
+2022-10-13T22:23:16.048270Z	   19 Prepare	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = ?
+                AND BINARY rc.constraint_schema = ?
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T22:23:16.048360Z	   19 Execute	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = 'prisma_migrate_shadow_db_d8ea54b4-af8e-43c9-afe5-61813e310608'
+                AND BINARY rc.constraint_schema = 'prisma_migrate_shadow_db_d8ea54b4-af8e-43c9-afe5-61813e310608'
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T22:23:16.051597Z	   19 Prepare	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = ?
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T22:23:16.051666Z	   19 Execute	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = 'prisma_migrate_shadow_db_d8ea54b4-af8e-43c9-afe5-61813e310608'
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T22:23:16.054034Z	   19 Prepare	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = ?
+2022-10-13T22:23:16.054151Z	   19 Execute	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = 'prisma_migrate_shadow_db_d8ea54b4-af8e-43c9-afe5-61813e310608'
+2022-10-13T22:23:16.056285Z	   19 Prepare	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = ?
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T22:23:16.056341Z	   19 Execute	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = 'prisma_migrate_shadow_db_d8ea54b4-af8e-43c9-afe5-61813e310608'
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T22:23:16.057236Z	   13 Query	DROP DATABASE IF EXISTS `prisma_migrate_shadow_db_d8ea54b4-af8e-43c9-afe5-61813e310608`
+2022-10-13T22:23:18.421080Z	   13 Query	CREATE DATABASE `prisma_migrate_shadow_db_dccdd828-fd34-4e59-8eb0-0c71d8fb0ae9`
+2022-10-13T22:23:18.423463Z	   20 Connect	root@localhost on prisma_migrate_shadow_db_dccdd828-fd34-4e59-8eb0-0c71d8fb0ae9 using TCP/IP
+2022-10-13T22:23:18.423786Z	   20 Query	SELECT @@socket
+2022-10-13T22:23:18.424074Z	   21 Connect	root@localhost on prisma_migrate_shadow_db_dccdd828-fd34-4e59-8eb0-0c71d8fb0ae9 using Socket
+2022-10-13T22:23:18.424237Z	   21 Query	SELECT @@max_allowed_packet
+2022-10-13T22:23:18.424360Z	   21 Query	SELECT @@wait_timeout
+2022-10-13T22:23:18.424486Z	   20 Quit	
+2022-10-13T22:23:18.424513Z	   21 Query	SELECT @@max_allowed_packet
+2022-10-13T22:23:18.424633Z	   21 Query	SELECT @@wait_timeout
+2022-10-13T22:23:18.424815Z	   21 Prepare	SELECT @@version, @@GLOBAL.version
+2022-10-13T22:23:18.424868Z	   21 Execute	SELECT @@version, @@GLOBAL.version
+2022-10-13T22:23:18.425043Z	   21 Prepare	SELECT @@lower_case_table_names
+2022-10-13T22:23:18.425142Z	   21 Execute	SELECT @@lower_case_table_names
+2022-10-13T22:23:18.425345Z	   21 Prepare	SELECT @@GLOBAL.version version
+2022-10-13T22:23:18.425393Z	   21 Execute	SELECT @@GLOBAL.version version
+2022-10-13T22:23:18.427543Z	   21 Prepare	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = ?
+                AND column_info.table_schema = ?
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T22:23:18.427640Z	   21 Execute	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = 'prisma_migrate_shadow_db_dccdd828-fd34-4e59-8eb0-0c71d8fb0ae9'
+                AND column_info.table_schema = 'prisma_migrate_shadow_db_dccdd828-fd34-4e59-8eb0-0c71d8fb0ae9'
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T22:23:18.430197Z	   21 Prepare	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = ?
+            ORDER BY ordinal_position
+2022-10-13T22:23:18.430328Z	   21 Execute	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = 'prisma_migrate_shadow_db_dccdd828-fd34-4e59-8eb0-0c71d8fb0ae9'
+            ORDER BY ordinal_position
+2022-10-13T22:23:18.432447Z	   21 Prepare	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = ?
+                AND BINARY rc.constraint_schema = ?
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T22:23:18.432535Z	   21 Execute	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = 'prisma_migrate_shadow_db_dccdd828-fd34-4e59-8eb0-0c71d8fb0ae9'
+                AND BINARY rc.constraint_schema = 'prisma_migrate_shadow_db_dccdd828-fd34-4e59-8eb0-0c71d8fb0ae9'
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T22:23:18.436117Z	   21 Prepare	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = ?
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T22:23:18.436209Z	   21 Execute	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = 'prisma_migrate_shadow_db_dccdd828-fd34-4e59-8eb0-0c71d8fb0ae9'
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T22:23:18.438731Z	   21 Prepare	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = ?
+2022-10-13T22:23:18.438837Z	   21 Execute	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = 'prisma_migrate_shadow_db_dccdd828-fd34-4e59-8eb0-0c71d8fb0ae9'
+2022-10-13T22:23:18.440755Z	   21 Prepare	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = ?
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T22:23:18.440853Z	   21 Execute	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = 'prisma_migrate_shadow_db_dccdd828-fd34-4e59-8eb0-0c71d8fb0ae9'
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T22:23:18.441715Z	   13 Query	DROP DATABASE IF EXISTS `prisma_migrate_shadow_db_dccdd828-fd34-4e59-8eb0-0c71d8fb0ae9`
+2022-10-13T22:23:18.445708Z	   13 Query	SELECT GET_LOCK('prisma_migrate', 10)
+2022-10-13T22:23:18.445917Z	   13 Execute	SELECT @@GLOBAL.version version
+2022-10-13T22:23:18.446102Z	   13 Execute	SELECT DISTINCT BINARY table_info.table_name AS table_name
+            FROM information_schema.tables AS table_info
+            JOIN information_schema.columns AS column_info
+                ON BINARY column_info.table_name = BINARY table_info.table_name
+            WHERE
+                table_info.table_schema = 'obsidian'
+                AND column_info.table_schema = 'obsidian'
+                -- Exclude views.
+                AND table_info.table_type = 'BASE TABLE'
+            ORDER BY BINARY table_info.table_name
+2022-10-13T22:23:18.450487Z	   13 Execute	SELECT
+                column_name column_name,
+                data_type data_type,
+                column_type full_data_type,
+                character_maximum_length character_maximum_length,
+                numeric_precision numeric_precision,
+                numeric_scale numeric_scale,
+                datetime_precision datetime_precision,
+                column_default column_default,
+                is_nullable is_nullable,
+                extra extra,
+                table_name table_name
+            FROM information_schema.columns
+            WHERE table_schema = 'obsidian'
+            ORDER BY ordinal_position
+2022-10-13T22:23:18.452658Z	   13 Execute	SELECT
+                kcu.constraint_name constraint_name,
+                kcu.column_name column_name,
+                kcu.referenced_table_name referenced_table_name,
+                kcu.referenced_column_name referenced_column_name,
+                kcu.ordinal_position ordinal_position,
+                kcu.table_name table_name,
+                rc.delete_rule delete_rule,
+                rc.update_rule update_rule
+            FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc ON
+                BINARY kcu.constraint_name = BINARY rc.constraint_name
+            WHERE
+                BINARY kcu.table_schema = 'obsidian'
+                AND BINARY rc.constraint_schema = 'obsidian'
+                AND kcu.referenced_column_name IS NOT NULL
+
+            ORDER BY
+                BINARY kcu.table_schema,
+                BINARY kcu.table_name,
+                BINARY kcu.constraint_name,
+                kcu.ordinal_position
+2022-10-13T22:23:18.455484Z	   13 Execute	SELECT
+    table_name AS table_name,
+    index_name AS index_name,
+    column_name AS column_name,
+    sub_part AS partial,
+    seq_in_index AS seq_in_index,
+    collation AS column_order,
+    non_unique AS non_unique,
+    index_type AS index_type
+FROM information_schema.statistics
+WHERE table_schema = 'obsidian'
+ORDER BY BINARY table_name, BINARY index_name, seq_in_index
+2022-10-13T22:23:18.457830Z	   13 Execute	SELECT TABLE_NAME AS view_name, VIEW_DEFINITION AS view_sql
+FROM INFORMATION_SCHEMA.VIEWS
+WHERE TABLE_SCHEMA = 'obsidian'
+2022-10-13T22:23:18.458892Z	   13 Execute	SELECT routine_name AS name,
+                routine_definition AS definition
+            FROM information_schema.routines
+            WHERE ROUTINE_SCHEMA = 'obsidian'
+            AND ROUTINE_TYPE = 'PROCEDURE'
+2022-10-13T22:23:18.459878Z	   13 Execute	SELECT `id`, `checksum`, `finished_at`, `migration_name`, `logs`, `rolled_back_at`, `started_at`, `applied_steps_count` FROM `_prisma_migrations` ORDER BY `started_at` ASC
+2022-10-13T22:23:18.465464Z	   13 Prepare	INSERT INTO `_prisma_migrations` (`id`,`checksum`,`started_at`,`migration_name`) VALUES (?,?,?,?)
+2022-10-13T22:23:18.465597Z	   13 Execute	INSERT INTO `_prisma_migrations` (`id`,`checksum`,`started_at`,`migration_name`) VALUES ('a862a845-9b59-4d54-bce4-98ea0e913426','81941a3412ceaf55cb4dc0e6bee35c488003303d2929e308b8ded3d1575fdd20','2022-10-13 22:23:18.460211','20221013222318_')
+2022-10-13T22:23:18.470399Z	   13 Query	-- CreateTable
+CREATE TABLE `Sample` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `cleanBath` VARCHAR(191) NOT NULL,
+    `cleanKitchen` VARCHAR(191) NOT NULL,
+    `date` DATETIME(3) NOT NULL,
+
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci
+2022-10-13T22:23:18.480184Z	   13 Prepare	UPDATE `_prisma_migrations` SET `applied_steps_count` = (`applied_steps_count` + ?) WHERE `id` = ?
+2022-10-13T22:23:18.480288Z	   13 Prepare	UPDATE `_prisma_migrations` SET `applied_steps_count` = (`applied_steps_count` + ?) WHERE `id` = ?
+2022-10-13T22:23:18.482382Z	   13 Execute	UPDATE `_prisma_migrations` SET `applied_steps_count` = (`applied_steps_count` + 1) WHERE `id` = 'a862a845-9b59-4d54-bce4-98ea0e913426'
+2022-10-13T22:23:18.484395Z	   13 Prepare	UPDATE `_prisma_migrations` SET `finished_at` = ? WHERE `id` = ?
+2022-10-13T22:23:18.484535Z	   13 Execute	UPDATE `_prisma_migrations` SET `finished_at` = '2022-10-13 22:23:18.484063' WHERE `id` = 'a862a845-9b59-4d54-bce4-98ea0e913426'
