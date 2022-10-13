@@ -1,0 +1,102 @@
+
+> prisma-mysql@0.0.0 pretest
+> mysql -u root -e 'DROP DATABASE obsidian;' ; mysql -u root -e 'CREATE DATABASE obsidian;'
+
+
+> prisma-mysql@0.0.0 test
+> export DEBUG='*'; pnpm exec prisma migrate dev --name test-migration
+
+2022-10-13T23:00:44.334Z prisma:engines  binaries to download libquery-engine, migration-engine, introspection-engine, prisma-fmt
+2022-10-13T23:00:45.324Z prisma:loadEnv  project root found at /Users/Pavel/code/work/prisma-dolt-debug-new/package.json
+2022-10-13T23:00:45.327Z prisma:tryLoadEnv  Environment variables not found at null
+2022-10-13T23:00:45.327Z prisma:tryLoadEnv  Environment variables not found at undefined
+2022-10-13T23:00:45.327Z prisma:tryLoadEnv  No Environment variables loaded
+2022-10-13T23:00:45.333Z prisma:getConfig  Using CLI Query Engine (Node-API Library) at: /Users/Pavel/code/work/prisma-dolt-debug-new/node_modules/.pnpm/@prisma+engines@4.4.0/node_modules/@prisma/engines/libquery_engine-darwin.dylib.node
+2022-10-13T23:00:45.349Z prisma:getConfig  Loaded Node-API Library
+2022-10-13T23:00:45.350Z prisma:getConfig  config data retrieved without errors in getConfigNodeAPI
+2022-10-13T23:00:45.350Z prisma:loadEnv  project root found at /Users/Pavel/code/work/prisma-dolt-debug-new/package.json
+2022-10-13T23:00:45.351Z prisma:tryLoadEnv  Environment variables not found at null
+2022-10-13T23:00:45.351Z prisma:tryLoadEnv  Environment variables not found at undefined
+2022-10-13T23:00:45.351Z prisma:tryLoadEnv  No Environment variables loaded
+Prisma schema loaded from prisma/schema.prisma
+2022-10-13T23:00:45.353Z prisma:getConfig  Using CLI Query Engine (Node-API Library) at: /Users/Pavel/code/work/prisma-dolt-debug-new/node_modules/.pnpm/@prisma+engines@4.4.0/node_modules/@prisma/engines/libquery_engine-darwin.dylib.node
+2022-10-13T23:00:45.353Z prisma:getConfig  Loaded Node-API Library
+2022-10-13T23:00:45.354Z prisma:getConfig  config data retrieved without errors in getConfigNodeAPI
+Datasource "db": MySQL database "obsidian" at "localhost:3306"
+
+2022-10-13T23:00:45.356Z prisma:getDMMF  Using CLI Query Engine (Node-API Library) at: /Users/Pavel/code/work/prisma-dolt-debug-new/node_modules/.pnpm/@prisma+engines@4.4.0/node_modules/@prisma/engines/libquery_engine-darwin.dylib.node
+2022-10-13T23:00:45.356Z prisma:getDMMF  Loaded Node-API Library
+2022-10-13T23:00:45.360Z prisma:getDMMF  unserialized dmmf result ready
+2022-10-13T23:00:45.361Z prisma:getDMMF  dmmf retrieved without errors in getDmmfNodeAPI
+2022-10-13T23:00:45.362Z prisma:getConfig  Using CLI Query Engine (Node-API Library) at: /Users/Pavel/code/work/prisma-dolt-debug-new/node_modules/.pnpm/@prisma+engines@4.4.0/node_modules/@prisma/engines/libquery_engine-darwin.dylib.node
+2022-10-13T23:00:45.362Z prisma:getConfig  Loaded Node-API Library
+2022-10-13T23:00:45.362Z prisma:getConfig  config data retrieved without errors in getConfigNodeAPI
+2022-10-13T23:00:45.364Z prisma:getConfig  Using CLI Query Engine (Node-API Library) at: /Users/Pavel/code/work/prisma-dolt-debug-new/node_modules/.pnpm/@prisma+engines@4.4.0/node_modules/@prisma/engines/libquery_engine-darwin.dylib.node
+2022-10-13T23:00:45.364Z prisma:getConfig  Loaded Node-API Library
+2022-10-13T23:00:45.364Z prisma:getConfig  config data retrieved without errors in getConfigNodeAPI
+2022-10-13T23:00:45.416Z prisma:migrateEngine:rpc  starting migration engine with binary: /Users/Pavel/code/work/prisma-dolt-debug-new/node_modules/.pnpm/@prisma+engines@4.4.0/node_modules/@prisma/engines/migration-engine-darwin
+2022-10-13T23:00:45.423Z prisma:migrateEngine:rpc  SENDING RPC CALL {"id":1,"jsonrpc":"2.0","method":"devDiagnostic","params":{"migrationsDirectoryPath":"/Users/Pavel/code/work/prisma-dolt-debug-new/prisma/migrations"}}
+2022-10-13T23:00:45.436Z prisma:migrateEngine:stderr  {"timestamp":"2022-10-13T23:00:45.435551Z","level":"INFO","fields":{"message":"Starting migration engine RPC server","git_hash":"f352a33b70356f46311da8b00d83386dd9f145d6"},"target":"migration_engine"}
+2022-10-13T23:00:45.502Z prisma:migrate:dev  {
+  devDiagnostic: '{\n  "action": {\n    "tag": "createMigration"\n  }\n}'
+}
+2022-10-13T23:00:45.504Z prisma:migrateEngine:rpc  SENDING RPC CALL {"id":2,"jsonrpc":"2.0","method":"applyMigrations","params":{"migrationsDirectoryPath":"/Users/Pavel/code/work/prisma-dolt-debug-new/prisma/migrations"}}
+2022-10-13T23:00:45.527Z prisma:migrateEngine:stderr  {"timestamp":"2022-10-13T23:00:45.52709Z","level":"INFO","fields":{"message":"Analysis run in 22ms","analysis_duration_ms":22},"target":"migration_core::commands::apply_migrations","span":{"name":"ApplyMigrations"},"spans":[{"name":"ApplyMigrations"}]}
+2022-10-13T23:00:45.528Z prisma:migrateEngine:rpc  SENDING RPC CALL {"id":3,"jsonrpc":"2.0","method":"evaluateDataLoss","params":{"migrationsDirectoryPath":"/Users/Pavel/code/work/prisma-dolt-debug-new/prisma/migrations","prismaSchema":"datasource db {\n    provider = \"mysql\"\n    url      = \"mysql://root@localhost:3306/obsidian\"\n}\n\nmodel Sample {\n    id           Int      @id @default(autoincrement())\n    cleanBath    String\n    cleanKitchen String\n    date         DateTime\n}\n\ngenerator client {\n    provider = \"prisma-client-js\"\n}\n"}}
+2022-10-13T23:00:45.547Z prisma:migrate:dev  {
+  evaluateDataLossResult: { migrationSteps: 1, unexecutableSteps: [], warnings: [] }
+}
+2022-10-13T23:00:45.551Z prisma:migrateEngine:rpc  SENDING RPC CALL {"id":4,"jsonrpc":"2.0","method":"createMigration","params":{"migrationsDirectoryPath":"/Users/Pavel/code/work/prisma-dolt-debug-new/prisma/migrations","migrationName":"test_migration","draft":false,"prismaSchema":"datasource db {\n    provider = \"mysql\"\n    url      = \"mysql://root@localhost:3306/obsidian\"\n}\n\nmodel Sample {\n    id           Int      @id @default(autoincrement())\n    cleanBath    String\n    cleanKitchen String\n    date         DateTime\n}\n\ngenerator client {\n    provider = \"prisma-client-js\"\n}\n"}}
+2022-10-13T23:00:45.573Z prisma:migrate:dev  {
+  createMigrationResult: { generatedMigrationName: '20221013230045_test_migration' }
+}
+2022-10-13T23:00:45.573Z prisma:migrateEngine:rpc  SENDING RPC CALL {"id":5,"jsonrpc":"2.0","method":"applyMigrations","params":{"migrationsDirectoryPath":"/Users/Pavel/code/work/prisma-dolt-debug-new/prisma/migrations"}}
+2022-10-13T23:00:45.583Z prisma:migrateEngine:stderr  {"timestamp":"2022-10-13T23:00:45.583774Z","level":"INFO","fields":{"message":"Analysis run in 9ms","analysis_duration_ms":9},"target":"migration_core::commands::apply_migrations","span":{"name":"ApplyMigrations"},"spans":[{"name":"ApplyMigrations"}]}
+2022-10-13T23:00:45.584Z prisma:migrateEngine:stderr  {"timestamp":"2022-10-13T23:00:45.583868Z","level":"INFO","fields":{"message":"Applying `20221013230045_test_migration`","script":"-- CreateTable\nCREATE TABLE `Sample` (\n    `id` INTEGER NOT NULL AUTO_INCREMENT,\n    `cleanBath` VARCHAR(191) NOT NULL,\n    `cleanKitchen` VARCHAR(191) NOT NULL,\n    `date` DATETIME(3) NOT NULL,\n\n    PRIMARY KEY (`id`)\n) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;\n"},"target":"migration_core::commands::apply_migrations","span":{"migration_name":"20221013230045_test_migration","name":"Applying migration"},"spans":[{"name":"ApplyMigrations"},{"migration_name":"20221013230045_test_migration","name":"Applying migration"}]}
+Applying migration `20221013230045_test_migration`
+
+The following migration(s) have been created and applied from new schema changes:
+
+migrations/
+  └─ 20221013230045_test_migration/
+    └─ migration.sql
+
+Your database is now in sync with your schema.
+
+Running generate... (Use --skip-generate to skip the generators)
+2022-10-13T23:00:45.911Z prisma:getConfig  Using CLI Query Engine (Node-API Library) at: /Users/Pavel/code/work/prisma-dolt-debug-new/node_modules/.pnpm/prisma@4.4.0/node_modules/prisma/libquery_engine-darwin.dylib.node
+2022-10-13T23:00:45.914Z prisma:getConfig  Loaded Node-API Library
+2022-10-13T23:00:45.915Z prisma:getConfig  config data retrieved without errors in getConfigNodeAPI
+2022-10-13T23:00:45.915Z prisma:getDMMF  Using CLI Query Engine (Node-API Library) at: /Users/Pavel/code/work/prisma-dolt-debug-new/node_modules/.pnpm/prisma@4.4.0/node_modules/prisma/libquery_engine-darwin.dylib.node
+2022-10-13T23:00:45.915Z prisma:getDMMF  Loaded Node-API Library
+2022-10-13T23:00:45.917Z prisma:getDMMF  unserialized dmmf result ready
+2022-10-13T23:00:45.917Z prisma:getDMMF  dmmf retrieved without errors in getDmmfNodeAPI
+2022-10-13T23:00:45.923Z prisma:generator  prismaCLIDir /Users/Pavel/code/work/prisma-dolt-debug-new/node_modules/prisma
+2022-10-13T23:00:45.923Z prisma:generator  prismaClientDir /Users/Pavel/code/work/prisma-dolt-debug-new/node_modules/@prisma/client
+2022-10-13T23:00:45.923Z prisma:generator  baseDir /Users/Pavel/code/work/prisma-dolt-debug-new/prisma
+2022-10-13T23:00:45.925Z prisma:generator  typescriptPath undefined
+2022-10-13T23:00:46.142Z prisma:GeneratorProcess  2022-10-13T23:00:46.140Z prisma:client:generator  requiredEngine: libqueryEngine
+2022-10-13T23:00:46.142Z prisma:getGenerators  neededVersions {
+  "f352a33b70356f46311da8b00d83386dd9f145d6": {
+    "engines": [
+      "libqueryEngine"
+    ],
+    "binaryTargets": []
+  }
+}
+2022-10-13T23:00:46.420Z prisma:getGenerators  {
+  generatorBinaryPaths: {
+    libqueryEngine: {
+      darwin: '/Users/Pavel/code/work/prisma-dolt-debug-new/node_modules/.pnpm/prisma@4.4.0/node_modules/prisma/libquery_engine-darwin.dylib.node'
+    }
+  }
+}
+[2K[1A[2K[GRunning generate... - Prisma Client
+2022-10-13T23:00:46.437Z prisma:GeneratorProcess  2022-10-13T23:00:46.437Z prisma:loadEnv  project root found at /Users/Pavel/code/work/prisma-dolt-debug-new/package.json
+[2K[1A[2K[G✔ Generated Prisma Client (4.4.0 | library) to ./node_modules/.pnpm/@prisma+clie
+nt@4.4.0_prisma@4.4.0/node_modules/@prisma/client in 73ms
+
+
+2022-10-13T23:00:46.498Z prisma:getConfig  Using CLI Query Engine (Node-API Library) at: /Users/Pavel/code/work/prisma-dolt-debug-new/node_modules/.pnpm/@prisma+engines@4.4.0/node_modules/@prisma/engines/libquery_engine-darwin.dylib.node
+2022-10-13T23:00:46.498Z prisma:getConfig  Loaded Node-API Library
+2022-10-13T23:00:46.499Z prisma:getConfig  config data retrieved without errors in getConfigNodeAPI

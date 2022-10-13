@@ -13,7 +13,7 @@
 	],
 	"scripts": {
 		"pretest": "mysql -u root -e 'DROP DATABASE obsidian;' ; mysql -u root -e 'CREATE DATABASE obsidian;'",
-		"test": "export DEBUG='*'; pnpm exec prisma migrate dev"
+		"test": "export DEBUG='*'; pnpm exec prisma migrate dev --name test-migration"
 	},
 	"dependencies": {
 		"@prisma/client": "^4.4.0",

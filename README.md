@@ -35,11 +35,25 @@
 
 ## Logs
 
-DB logs for both MySQL (works) and dolt (Prisma throws error) are in this repo: [mysql-logs.txt](mysql-logs.txt) and [dolt-logs.txt](dolt-logs.txt).
+DB logs for both MySQL (works) and dolt (Prisma throws error) are in this repo.
+
+Logs from successful Prisma+MySQL migration:
+
+- [mysql-logs.txt](logs/mysql-log.txt)
+  - this contains the MySQL DB logs
+- [prisma-mysql-logs.txt](logs/prisma-mysql-log.txt)
+  - this contains the Prisma logs
+
+Logs from a failed Prisma+dolt migration:
+
+- [dolt-logs.txt](logs/dolt-log.txt)
+  - this contains the dolt DB logs
+- [prisma-dolt-log.txt](logs/prisma-dolt-log.txt)
+  - this contains the Prisma logs
 
 ### Analysis?
 
-Here is an excerpt from the dolt logs, right before Prisma throws its error:
+Here is an excerpt from the dolt-log.txt, right before Prisma throws its error:
 ```
 2022-10-13T10:21:01-07:00 INFO [conn 5] NewConnection {DisableClientMultiStatements=false}
 2022-10-13T10:21:01-07:00 DEBUG [conn 5] Starting query {connectTime=2022-10-13T10:21:01-07:00, connectionDb=obsidian, query=SELECT @@socket}
